@@ -7,9 +7,9 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "DataViz makeover"
+    - text: "DataViz Makeover"
       href: dataViz.html
-    - text: "Visual Analytics project"
+    - text: "Visual Analytics Project"
       href: vap.html
     - text: "About"
       href: about.html

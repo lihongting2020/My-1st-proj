@@ -1,12 +1,16 @@
 name: "My 1st proj"
-title: "My Blog"
+title: "Hongting's Blog"
 description: |
-  My Blog
+  Hongting's Blog
 output_dir: "_site"
 navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "DataViz makeover"
+      href: dataViz.html
+    - text: "Visual Analytics project"
+      href: vap.html
     - text: "About"
       href: about.html
 output: distill::distill_article

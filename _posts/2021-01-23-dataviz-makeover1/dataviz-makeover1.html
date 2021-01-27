@@ -86,638 +86,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Hongting's Blog: About this blog</title>
+  <title>DataViz Makeover 1</title>
   
-  <meta property="description" itemprop="description" content="Some additional details about the blog"/>
+  <meta property="description" itemprop="description" content="Assignment for course, ISSS608 Visual Analytics and Application."/>
   
   
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-01-23"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-01-23"/>
+  <meta name="article:author" content="LI Hongting"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Hongting&#39;s Blog: About this blog"/>
+  <meta property="og:title" content="DataViz Makeover 1"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Some additional details about the blog"/>
+  <meta property="og:description" content="Assignment for course, ISSS608 Visual Analytics and Application."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Hongting&#39;s Blog"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Hongting&#39;s Blog: About this blog"/>
-  <meta property="twitter:description" content="Some additional details about the blog"/>
+  <meta property="twitter:title" content="DataViz Makeover 1"/>
+  <meta property="twitter:description" content="Assignment for course, ISSS608 Visual Analytics and Application."/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this blog"]},{"type":"character","attributes":{},"value":["Some additional details about the blog"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["DataViz Makeover 1"]},{"type":"character","attributes":{},"value":["Assignment for course, ISSS608 Visual Analytics and Application.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["LI Hongting"]},{"type":"character","attributes":{},"value":["https://www.linkedin.com/in/lihongting/"]}]}]},{"type":"character","attributes":{},"value":["01-23-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["3.2add data.PNG","3.2color.PNG","3.2filter.PNG","3.2mark.PNG","3.3dualaxis.PNG","3.3objectshape.PNG","3.4annotate.PNG","3.5blank.PNG","3.5floatingtext.PNG","3.5text.PNG","CalculatedField1.png","CalculatedField2.PNG","Change data type.PNG","Dashboard.PNG","Dashboard2.png","Dataprep1.PNG","Dataprep2.PNG","dataviz-makeover1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover1_files/distill-2.2.21/template.v2.js","dataviz-makeover1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover1_files/kePrint-0.0.1/kePrint.js","dataviz-makeover1_files/lightable-0.0.1/lightable.css","dataviz-makeover1_files/popper-2.6.0/popper.min.js","dataviz-makeover1_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover1_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover1_files/tippy-6.2.7/tippy.css","dataviz-makeover1_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover1_files/webcomponents-2.0.0/webcomponents.js","Import data.PNG","Import data2.PNG","Import data3.PNG","pivot1.png","Proposed design.jpg"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-  
-  <script type="application/javascript">
-  
-    window.headroom_prevent_pin = false;
-  
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-  
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-  
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-  
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-  
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-  
-  <style type="text/css">
-  
-  /* Theme (user-documented overrideables for nav appearance) */
-  
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-  
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .distill-site-nav a:hover {
-    color: white;
-  }
-  
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-  
-  .distill-site-header {
-  
-  }
-  
-  .distill-site-footer {
-  
-  }
-  
-  
-  /* Site Header */
-  
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-  
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-  
-  
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-  
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-  
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-  
-  .distill-site-header .logo {
-    padding: 0;
-  }
-  
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-  
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-  
-  
-  
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-  
-  
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-  
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-  
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-  
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-dropdown-active {
-    display: block;
-  }
-  
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-  
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-  
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-  
-  /* Site Footer */
-  
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-  
-  /* Headroom */
-  
-  d-title {
-    padding-top: 6rem;
-  }
-  
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-  
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-  
-  .headroom--unpinned {
-    top: -100px;
-  }
-  
-  .headroom--pinned {
-    top: 0;
-  }
-  
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-  
-  </style>
-  
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-  
-  <script type="application/javascript">
-  
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-  
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-  
-  function createFuseIndex() {
-  
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-  
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-  
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-  
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-  
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-  
-    createFuseIndex()
-      .then(function(fuse) {
-  
-        // make search box visible
-        searchEl.classList.remove('hidden');
-  
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-  
-  });
-  
-  </script>
-  
-  <style type="text/css">
-  
-  .nav-search {
-    font-size: x-small;
-  }
-  
-  /* Algolioa Autocomplete */
-  
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-  
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-  
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  </style>
-  
-  
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
   
@@ -2033,14 +1434,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
   
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="dataviz-makeover1_files/kePrint-0.0.1/kePrint.js"></script>
+  <link href="dataviz-makeover1_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  <script src="dataviz-makeover1_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="dataviz-makeover1_files/popper-2.6.0/popper.min.js"></script>
+  <link href="dataviz-makeover1_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="dataviz-makeover1_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="dataviz-makeover1_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="dataviz-makeover1_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="dataviz-makeover1_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="dataviz-makeover1_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="dataviz-makeover1_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -2052,48 +1456,416 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this blog","description":"Some additional details about the blog","authors":[]}
+{"title":"DataViz Makeover 1","description":"Assignment for course, ISSS608 Visual Analytics and Application.","authors":[{"author":"LI Hongting","authorURL":"https://www.linkedin.com/in/lihongting/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-01-23T00:00:00.000+08:00","citationText":"Hongting, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Hongting's Blog</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-DataViz Makeover
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="posts\2021-01-23-dataviz-makeover1\index.html">DataViz Makeover 1</a>
-</div>
-</div>
-<a href="vap.html">Visual Analytics Project</a>
-<a href="about.html">About</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About this blog</h1>
+<h1>DataViz Makeover 1</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Some additional details about the blog</p></p>
+<p><p>Assignment for course, ISSS608 Visual Analytics and Application.</p></p>
 </div>
 
+<div class="d-byline">
+  LI Hongting <a href="https://www.linkedin.com/in/lihongting/" class="uri">https://www.linkedin.com/in/lihongting/</a> 
+  
+<br/>01-23-2021
+</div>
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#critiques-and-suggestions">1 Critiques and Suggestions</a><ul>
+<li><a href="#clarity">1.1 Clarity</a></li>
+<li><a href="#aesthetic">1.2 Aesthetic</a></li>
+</ul></li>
+<li><a href="#sketch-of-proposed-design">2 Sketch of Proposed Design</a></li>
+<li><a href="#steps-to-create-dataviz-using-tableau">3 Steps to Create Dataviz Using Tableau</a><ul>
+<li><a href="#data-preparation">3.1 Data preparation</a></li>
+<li><a href="#visualization-1-resident-labour-share-by-age-group-2009-vs-2019">3.2 Visualization 1: Resident Labour Share by Age Group, 2009 vs 2019</a></li>
+<li><a href="#visualization-2-working-aged-resident-share-by-age-group-2009-vs-2019">3.3 Visualization 2: Working-aged Resident Share by Age Group, 2009 vs 2019</a></li>
+<li><a href="#visualization-3-resident-lfpr-by-age-group-2009-vs-2019">3.4 Visualization 3: Resident LFPR by Age Group, 2009 vs 2019</a></li>
+<li><a href="#dashboard-creation">3.5 Dashboard creation</a></li>
+</ul></li>
+<li><a href="#final-visualization">4 Final Visualization</a></li>
+<li><a href="#discussion">5 Discussion</a><ul>
+<li><a href="#insight-1-elderly-resident-labour-force-share-increase">5.1 Insight 1: Elderly resident labour force share increase</a></li>
+<li><a href="#insight-2-shifting-to-aging-population">5.2 Insight 2: Shifting to aging population</a></li>
+<li><a href="#insight-3-lfpr-increase-across-age-groups">5.3 Insight 3: LFPR increase across age groups</a></li>
+<li><a href="#future-works">5.4 Future works</a></li>
+</ul></li>
+<li><a href="#references">6 References</a></li>
+</ul>
+</nav>
+</div>
+<p>Data Visualisation (Tableau Online): <a href="https://">Singapore Resident Labour Force, 2009 vs 2019</a></p>
+<p>Data Source: <a href="https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx">Singapore MOM Labour Force 2019, Table 5 and Table 7</a></p>
+<h1 id="critiques-and-suggestions">1 Critiques and Suggestions</h1>
+<h3 id="clarity">1.1 Clarity</h3>
+<blockquote>
+<p>yes</p>
+</blockquote>
+<div class="layout-chunk" data-layout="l-body">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+SN
+</th>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+Critiques
+</th>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+Suggestions
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+1
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+Contents from the paragraph e.g. ‘share of residents aged 55 &amp; over in the labour force rose substantially from 16% in 2009 to 25% in 2019’, is not simply presented in the graph, but need to aggregate data mannually.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+Re-organize age group as ‘15 to 24’, ‘25 to 54’ and ‘55 &amp; over’.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+2
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+The graph and table cannot support some information in the summary paragraph, e.g. aging population, LFPR.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+Add chart on working-aged residents distribution and LFPR.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+3
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+The chart does not convey message on median age of residents in the labour force.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+Exclude this part from summary, as age group is categorical data, and data source is already aggregated by age group.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="aesthetic">1.2 Aesthetic</h3>
+<div class="layout-chunk" data-layout="l-body">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+SN
+</th>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+Critiques
+</th>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+Suggestions
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+4
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+Generally, clear use of fonts, font sizes and colors. Colors are consitantly used by year.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+Follow and formart likewise.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+5
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+Though median age is not well derived from same data source (as mentioned in SN/3), it is a good example to use annotation on the chart to highlight important information.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+Follow this practice to mark/annotate important information on chart.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+6
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+Units are not indicated in y-axis, which makes the chart difficult to read.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+Ensure proper axis use with title, headers, units and marks.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="sketch-of-proposed-design">2 Sketch of Proposed Design</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:proposal"></span>
+<img src="Proposed%20design.jpg" alt="Sketch of propose" width="400" height="600" />
+<p class="caption">
+Figure 1: Sketch of propose
+</p>
+</div>
+</div>
+<ul>
+<li>Lead-in paragraph is to highlight key information and insights from visualizations, which helps to guide readers on the key points.Figures mentioned in these paragraph will also be annotated in charts.</li>
+<li>Legend of year is explicitly displayed at top right corner, as this legend will be used throughout the dashboard.</li>
+<li>To retain intent of original visualization and summary, a horizontal bar chart is used to compare Resident Labour Share by Age Group in 2009 versus what it was in 2019. This simplify the original chart with key information on resident labour force shares for 3 age groups.</li>
+<li>To add a dumbbell chart to visualize the changes of Working-aged Resident Share by Age Group between 2009 and 2019. This is a variation of horizontal bar chart, where both years can be shown in same row, and easy to read the change in direction.</li>
+<li>To add a circle plot to show LFPR (Labour Force Participation Rate) by age groups, which is mentioned in original paragraph.</li>
+</ul>
+<h1 id="steps-to-create-dataviz-using-tableau">3 Steps to Create Dataviz Using Tableau</h1>
+<h3 id="data-preparation">3.1 Data preparation</h3>
+<p>First, inspect data in excel, Table 7 includes resident labour force by 12 age sub-groups. Sheets, T7_F and T7_M are processed with following steps: (1) to remove excess rows at left and columns at right; (2) to add a new column ‘gender’ by tab name.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:Dataprep1"></span>
+<img src="Dataprep1.PNG" alt="Re-organized Table 7" width="100%" />
+<p class="caption">
+Figure 2: Re-organized Table 7
+</p>
+</div>
+</div>
+<p>Second, prepare Table 5 Working-aged labour force data likewise.Since we will study age group with wider age bands, it is not simply calculated with sub age group LFPR, but by dividing total of resident labour force by working-aged resident per age group. As such, we use Table 7, resident labour force devided by LFPR from Table 5 to capture working-aged resident.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:Dataprep2"></span>
+<img src="Dataprep2.PNG" alt="Derive calculated table, working-aged resident population" width="100%" />
+<p class="caption">
+Figure 3: Derive calculated table, working-aged resident population
+</p>
+</div>
+</div>
+<p>Third, import T7 data to Tableau Desktop by choosing File on the navigation bar and then connect to a Microsoft Excel file as below graph.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:importdata"></span>
+<img src="Import%20data.PNG" alt="Import data from excel file" width="200" />
+<p class="caption">
+Figure 4: Import data from excel file
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:importdata2"></span>
+<img src="Import%20data2.PNG" alt="Dragging over processed sheet to working area" width="400" />
+<p class="caption">
+Figure 5: Dragging over processed sheet to working area
+</p>
+</div>
+</div>
+<p>Forth, Pivot 11 years as Year column, change Pivot Field Name as “Year”, and Pivot Field Measure as “Resident labour”. Change “Year” column data type to “Date” by clicking the small “abc” symbol at top left of a column.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:pivot1"></span>
+<img src="pivot1.png" alt="Pivot data from columns to rows" width="100%" />
+<p class="caption">
+Figure 6: Pivot data from columns to rows
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:changedatatype"></span>
+<img src="Change%20data%20type.PNG" alt="Change data type" width="400" />
+<p class="caption">
+Figure 7: Change data type
+</p>
+</div>
+</div>
+<p>Last, create a calculated field named “Age group” by right clicking column “Age sub group”, choose “Create a calculated field” with below formula.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:calculatedfield1"></span>
+<img src="CalculatedField1.png" alt="Create a calculated field 1" width="400" />
+<p class="caption">
+Figure 8: Create a calculated field 1
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:calculatedfield2"></span>
+<img src="CalculatedField2.PNG" alt="Create a calculated field 2" width="600" />
+<p class="caption">
+Figure 9: Create a calculated field 2
+</p>
+</div>
+</div>
+<p>Repeat import and pivot likewise for the calculated table, “Resident population” sheet and join by “Year” with “T7_breakdown”. After pivoting 11 years, comprehend join selection for resident labour force, and working-aged resident sheets by Gender and Age sub group.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:importdata3"></span>
+<img src="Import%20data3.PNG" alt="Join two sheets" width="600" />
+<p class="caption">
+Figure 10: Join two sheets
+</p>
+</div>
+</div>
+<h3 id="visualization-1-resident-labour-share-by-age-group-2009-vs-2019">3.2 Visualization 1: Resident Labour Share by Age Group, 2009 vs 2019</h3>
+<p>Create a new sheet named as “% of Total Resident Labour by age group”. Select and drag “Age group”, “Year” columns to Rows, “Resident labour” to columns. Right click column attribute, select “Quick Table Calculation” by “Percent of Total”, and “Computing” with “Age group”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:32adddata"></span>
+<img src="3.2add%20data.PNG" alt="Add attributes and measures to chart and change calculation type" width="100%" />
+<p class="caption">
+Figure 11: Add attributes and measures to chart and change calculation type
+</p>
+</div>
+</div>
+<p>Then, add “Year” to filter, select “Years” in the first pop out window and choose 2009, 2019 only as we want to compare this two timestamp.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:32filter"></span>
+<img src="3.2filter.PNG" alt="Add year to filter" width="100%" />
+<p class="caption">
+Figure 12: Add year to filter
+</p>
+</div>
+</div>
+<p>Then, “Year” is moved over to Color under Marks pane and select “blue” for 2019 and “light blue” for 2009.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:32color"></span>
+<img src="3.2color.PNG" alt="Add year to color" width="100%" />
+<p class="caption">
+Figure 13: Add year to color
+</p>
+</div>
+</div>
+<p>As mentioned in section 2, figures appeared in lead-in paragraph are marked/annotated in chart. It is achieved by right click particular chart dataviz object, e.g. bar chart and select “Mark Label” and then “Always Show” to add labels selectively.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:32mark"></span>
+<img src="3.2mark.PNG" alt="Add mark labels to the chart" width="100%" />
+<p class="caption">
+Figure 14: Add mark labels to the chart
+</p>
+</div>
+</div>
+<p>Last, hide “Year” from column labels as it is colored with legend, and edit sheet title as “Resident Labour Share by Age Group, 2009 vs 2019”, and tooltip as:</p>
+<blockquote>
+<p>&lt;Age group&gt; age group includes &lt;% of Total SUM(Resident labour)&gt; of total resident labours in &lt;YEAR(Year)&gt;.</p>
+</blockquote>
+<h3 id="visualization-2-working-aged-resident-share-by-age-group-2009-vs-2019">3.3 Visualization 2: Working-aged Resident Share by Age Group, 2009 vs 2019</h3>
+<p>Create a new sheet for working-aged resident share by age group. Select and drag “Age group” to Rows, “Resident” twice to columns as we want to create both the dot and line.</p>
+<p>Then, add “Year” to filter, select “Years” in the first pop out window and choose 2009, 2019 only as we want to compare this two timestamp.</p>
+<p>Then, “Year” is moved over to Color under Marks pane for first “Resident” column and choose object shape as “Circle”.</p>
+<p>Under Marks pane for second “Resident” column, choose object shape as “Line”, drag over “Year” to “Path” and select path type as “Jump”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:33objectshape"></span>
+<img src="3.3objectshape.PNG" alt="Change resident population as line chart" width="300" />
+<p class="caption">
+Figure 15: Change resident population as line chart
+</p>
+</div>
+</div>
+<p>Right click right side Resident chart axis and select “Dual Axis”. Then, hide axis at the top by right clicking x-axis at top and uncheck “Show header”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:33dualaxis"></span>
+<img src="3.3dualaxis.PNG" alt="Use dual axis" width="100%" />
+<p class="caption">
+Figure 16: Use dual axis
+</p>
+</div>
+</div>
+<p>Swap sequence of two column to make the circle to appear behind the lines. Change both columns “Quick Table Calculation” type as “Percent of Total”, and “Computing” with “Age group”.</p>
+<p>Last, add marks for age group “55 &amp; over”, edit x-axis as “% of Total Working-aged Resident”, sheet title as “Resident Labour Share by Age Group, 2009 vs 2019” and tooltip as:</p>
+<blockquote>
+<p><Age group> age group includes &lt;% of Total SUM(Resident)&gt; of total working-age residents in &lt;YEAR(Year)&gt;.</p>
+</blockquote>
+<h3 id="visualization-3-resident-lfpr-by-age-group-2009-vs-2019">3.4 Visualization 3: Resident LFPR by Age Group, 2009 vs 2019</h3>
+<p>Create a new sheet named as “Labour Force Participation Rate” by age group. Create a calculated field, named “LFPR” with below formula:</p>
+<blockquote>
+<p>{EXCLUDE [Gender]: sum([Resident labour])/sum([Resident])}</p>
+</blockquote>
+<p>Select and drag “LFPR” to Rows, “Age group” to columns, “Year” to both Color and Filters, with 2009 and 2019 selected.</p>
+<p>Change Shape as “Shape” with empty circles, which help reader to visualize the change by colors easily.</p>
+<p>Next, edit title with dynamic information:</p>
+<blockquote>
+<p>Resident <Sheet Name> by Age Group, 2009 vs 2019</p>
+</blockquote>
+<p>Also, change tooltip as:</p>
+<blockquote>
+<p>LFPR for residents aged <Age group> is &lt;SUM(LFPR)&gt; in &lt;YEAR(Year 1)&gt;.</p>
+</blockquote>
+<p>Last, we want to highlight LFPR for age group “55 &amp; over”, but mark label not appearing as percentage, so annotation is used instead by right clicking the object and select “Annotate” and then “Mark”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:34annotate"></span>
+<img src="3.4annotate.PNG" alt="Label particular element with annotation" width="400" />
+<p class="caption">
+Figure 17: Label particular element with annotation
+</p>
+</div>
+</div>
+<p>with below content:</p>
+<blockquote>
+<p>&lt;SUM(Labour force participation rate)&gt;</p>
+</blockquote>
+<h3 id="dashboard-creation">3.5 Dashboard creation</h3>
+<p>Firstly, create a dashboard and drag above 3 visualizations over.</p>
+<p>Secondly, under the Dashboard Pane, select and drag a text object to the top of the dashboard as title.In the pop out window, use font size, bold and color to highlight key information.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:35text"></span>
+<img src="3.5text.PNG" alt="Add text object to dashboard" width="300" />
+<p class="caption">
+Figure 18: Add text object to dashboard
+</p>
+</div>
+</div>
+<p>Next, similar to 2nd step, add another box as description paragraphs to discuss insights.In the pop out window, Use font size, bold and color to highlight key information.</p>
+<p>Moreover, from Dashboard pane, under Object, select and drag “Blank” over to the top right corner, to index the legend a bit lower than the title.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:35blank"></span>
+<img src="3.5blank.PNG" alt="Add blank object to dashboard" width="300" />
+<p class="caption">
+Figure 19: Add blank object to dashboard
+</p>
+</div>
+</div>
+<p>Next, x axis title,“Age group” is shown at top of the chart in visualization 3, because it is categorical data, and axis header is at top of the chart, which is not conventional to position axis element/unit and header separately. (This is a limitation with Tableau currently.) So, we hide this by right clicking the title area and selecting field label for columns. This axis header is re-positioned at bottom of the chart by adding a floating text object. Select “Floating” at the bottom of Objects pane, then drag “Text” object over to the dashboard to create a floating text object.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:35floatingtext"></span>
+<img src="3.5floatingtext.PNG" alt="Add floating text object to dashboard" width="300" />
+<p class="caption">
+Figure 20: Add floating text object to dashboard
+</p>
+</div>
+</div>
+<p>Lastly, add a text object at the bottom and include author, article and data source information. Hyperlink is pre-generated and pasted in excel and pasted over.</p>
+<h1 id="final-visualization">4 Final Visualization</h1>
+<p>Below is the final visualization after this makeover journey.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:dashboard"></span>
+<img src="Dashboard2.png" alt="Final visualization" width="100%" />
+<p class="caption">
+Figure 21: Final visualization
+</p>
+</div>
+</div>
+<h1 id="discussion">5 Discussion</h1>
+<h3 id="insight-1-elderly-resident-labour-force-share-increase">5.1 Insight 1: Elderly resident labour force share increase</h3>
+<p>Looking at the horizontal bar chart, we see that there are substantial increase from 16% in 2009 to 25% in 2019 for share of resident labour force aged 55 years old and above. While, for other 2 age groups, the share decreased from 2009 to 2019.</p>
+<p>This dashboard highlighted that the share of resident aged 55 years old &amp; over in the labour force rose substantially from 16% in 2009 to 25% in 2019. Meanwhile, the share of resident labour force aged 25 to 54, declined from 75% to 67%.</p>
+<h3 id="insight-2-shifting-to-aging-population">5.2 Insight 2: Shifting to aging population</h3>
+<p>From the dumbbell plot, we can see there is a aging population trend, whereas the share of residents aged 55 &amp; over among working-aged resident population (aged 15 &amp; over) rose from 25% in 2009 to 34% in 2019.</p>
+<h3 id="insight-3-lfpr-increase-across-age-groups">5.3 Insight 3: LFPR increase across age groups</h3>
+<p>From the dot chart, we can observe that LFPR increase across 3 age groups, with 55 years old and over being the most substantial one.</p>
+<p>Even though LFPR increase for the 15 to 24, and 25 to 54 age groups, the population cohorts moving into these age bands are smaller than those moving out as discussed in 5.2. As a result, resident labour force share descreased for the 2 age groups as mentioned in 5.1.</p>
+<h3 id="future-works">5.4 Future works</h3>
+<p>We can also notice dataset include gender information, we might include this attribute to assess if there is any resident labour force population trend related to gender for future works.</p>
+<h1 id="references">6 References</h1>
+<ul>
+<li><a href="https://www.tableau.com/about/blog/2016/10/how-make-dumbbell-charts-tableau-60319">How to make dumbbell charts in Tableau</a></li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

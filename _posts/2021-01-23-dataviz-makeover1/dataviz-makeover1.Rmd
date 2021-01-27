@@ -18,16 +18,12 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Data Visualisation (Tableau Online): [Singapore Resident Labour Force, 2009 vs 2019](https://)
+Data Visualisation (Tableau Online): [Singapore Resident Labour Force, 2009 vs 2019](https://public.tableau.com/views/DataViz1-SingaporeLabourForce2009vs2019/ResidentLabourForceDashboard?:language=en&:display_count=y&:toolbar=n&:origin=viz_share_link)
 
 Data Source: [Singapore MOM Labour Force 2019, Table 5 and Table 7](https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx)
 
 #  1 Critiques and Suggestions
 ###  1.1 Clarity
-
->yes
-
-
 
 ```{r}
 

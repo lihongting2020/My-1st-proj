@@ -1,7 +1,8 @@
 ---
 title: "DataViz Makeover 1"
 description: |
-  Assignment for course, ISSS608 Visual Analytics and Application.
+  This report is an assignment for course, ISSS608 Visual Analytics and Application.
+  It covers a critique and re-design for a graph from Singapore Labour Force, 2019 report. It also includes a step-by-step guide to create a dashboard in Tableau. 
 author:
   - name: LI Hongting
     #image: ![](path/to/smallorb.png) 
@@ -18,7 +19,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Data Visualisation (Tableau Online): [Singapore Resident Labour Force, 2009 vs 2019](https://public.tableau.com/views/DataViz1-SingaporeLabourForce2009vs2019/ResidentLabourForceDashboard?:language=en&:display_count=y&:toolbar=n&:origin=viz_share_link)
+Data Visualisation (Tableau Online): [Singapore Resident Labour Force, 2009 vs 2019](https://public.tableau.com/profile/hongting.li8444#!/vizhome/DataViz1-SingaporeLabourForce2009vs2019/ResidentLabourForceDashboard)
 
 Data Source: [Singapore MOM Labour Force 2019, Table 5 and Table 7](https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx)
 
@@ -89,14 +90,14 @@ knitr::include_graphics("Proposed design.jpg")
 
 ### 3.1 Data preparation 
 
-First, inspect data in excel, Table 7 includes resident labour force by 12 age sub-groups. Sheets, T7_F and T7_M are processed with following steps: (1) to remove excess rows at left and columns at right; (2) to add a new column 'gender' by tab name.
+First, inspect data in excel, Table 7 includes resident labour force by 12 age sub-groups. Sheets, T7_F and T7_M are processed with following steps: (1) to remove excess rows at left and columns at right; (2) to add a new column 'Gender' followed by tab name.
 
 ```{r Dataprep1, echo=FALSE, fig.cap="Re-organized Table 7", out.width = '100%'}
 knitr::include_graphics("Dataprep1.png")
 
 ```
 
-Second, prepare Table 5 Working-aged labour force data likewise.Since we will study age group with wider age bands, it is not simply calculated with sub age group LFPR, but by dividing total of resident labour force by working-aged resident per age group. As such, we use Table 7, resident labour force devided by LFPR from Table 5 to capture working-aged resident.
+Second, prepare Table 5 Working-aged labour force data likewise. Since we will study age group with wider age bands, it is not simply calculated with sub age group LFPR, but by dividing total of resident labour force by working-aged resident per age group. As such, we use Table 7, resident labour force devided by LFPR from Table 5 to capture working-aged resident.
 
 ```{r Dataprep2, echo=FALSE, fig.cap="Derive calculated table, working-aged resident population", out.width = '100%'}
 knitr::include_graphics("Dataprep2.png")
@@ -140,7 +141,7 @@ knitr::include_graphics("CalculatedField2.png")
 
 ```
 
-Repeat import and pivot likewise for the calculated table, "Resident population" sheet and join by "Year" with "T7_breakdown". After pivoting 11 years, comprehend join selection for resident labour force, and working-aged resident sheets by Gender and Age sub group. 
+Repeat import and pivot likewise for the calculated table, "Resident population" sheet and join by "Year" with "T7_breakdown". After pivoting 11 years, comprehend join selection by "Gender" and "Age sub group". 
 
 ```{r importdata3, echo=FALSE, fig.cap="Join two sheets", out.width = '600'}
 knitr::include_graphics("Import data3.png")
@@ -211,7 +212,7 @@ Swap sequence of two column to make the circle to appear behind the lines. Chang
 
 Last, add marks for age group "55 & over", edit x-axis as "% of Total Working-aged Resident", sheet title as "Resident Labour Share by Age Group, 2009 vs 2019" and tooltip as:
 
-> <Age group> age group includes <% of Total SUM(Resident)> of total working-age residents in <YEAR(Year)>.
+> \<Age group> age group includes <% of Total SUM(Resident)> of total working-age residents in <YEAR(Year)>.
 
 ### 3.4 Visualization 3: Resident LFPR by Age Group, 2009 vs 2019
 
@@ -294,7 +295,7 @@ This dashboard highlighted that the share of resident aged 55 years old & over i
 From the dumbbell plot, we can see there is a aging population trend, whereas the share of residents aged 55 & over among working-aged resident population (aged 15 & over) rose from 25% in 2009 to 34% in 2019. 
 
 ### 5.3 Insight 3: LFPR increase across age groups
-From the dot chart, we can observe that LFPR increase across 3 age groups, with 55 years old and over being the most substantial one. 
+From the circle chart, we can observe that LFPR increase across 3 age groups, with 55 years old and over being the most substantial one. 
 
 Even though LFPR increase for the 15 to 24, and 25 to 54 age groups, the population cohorts moving into these age bands are smaller than those moving out as discussed in 5.2. As a result, resident labour force share descreased for the 2 age groups as mentioned in 5.1. 
 

@@ -23,6 +23,14 @@ Data Visualisation (Tableau Online): [Singapore Resident Labour Force, 2009 vs 2
 
 Data Source: [Singapore MOM Labour Force 2019, Table 5 and Table 7](https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx)
 
+
+Original dataviz:
+
+```{r original, echo=FALSE, fig.cap="Original dataviz", out.width = '100%'}
+knitr::include_graphics("1original.png")
+
+```
+
 #  1 Critiques and Suggestions
 ###  1.1 Clarity
 
@@ -74,7 +82,7 @@ kable(aesthetic,type='html',align='l') %>%
 
 #  2 Sketch of Proposed Design
 
-```{r proposal, echo=FALSE, fig.cap="Sketch of propose", out.width = '400', out.height='600'}
+```{r proposal, echo=FALSE, fig.cap="Sketch of proposed design", out.width = '400', out.height='600'}
 knitr::include_graphics("Proposed design.jpg")
 
 ```

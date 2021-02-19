@@ -1,0 +1,2980 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+<title>Hongting's Blog: DataViz Makeover 2</title>
+
+<meta property="description" itemprop="description" content="A short description of the post."/>
+
+
+<!--  https://schema.org/Article -->
+<meta property="article:published" itemprop="datePublished" content="2021-02-19"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-02-19"/>
+<meta name="article:author" content="LI Hongting"/>
+
+<!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<meta property="og:title" content="Hongting&#39;s Blog: DataViz Makeover 2"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="A short description of the post."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Hongting&#39;s Blog"/>
+
+<!--  https://dev.twitter.com/cards/types/summary -->
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="Hongting&#39;s Blog: DataViz Makeover 2"/>
+<meta property="twitter:description" content="A short description of the post."/>
+
+<!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+<script type="text/json" id="radix-rmarkdown-metadata">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["DataViz Makeover 2"]},{"type":"character","attributes":{},"value":["A short description of the post."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["LI Hongting"]},{"type":"character","attributes":{},"value":["https://www.linkedin.com/in/lihongting/"]}]}]},{"type":"character","attributes":{},"value":["02-19-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+</script>
+<!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["1.01DataPrep_python1.PNG","1.01DataPrep_python2.PNG","1.01DataPrep_python3.PNG","1.10DataPrep_household_children_alias_calculatedfiled.PNG","1.11DataPrep_household_children_alias_calculatedfiled3.PNG","1.12DataPrep_household_children_alias_calculatedfiled4.PNG","1.1DataPrep_country1.PNG","1.2DataPrep_country3.PNG","1.2DataPrep_country4.PNG","1.3DataPrep_Vac1_recode.PNG","1.4DataPrep_Vac1_colname.PNG","1.5DataPrep_household_size_move1.PNG","1.6DataPrep_household_size_move2.PNG","1.7DataPrep_household_size_rename.PNG","1.8DataPrep_household_children_alias.PNG","1.9DataPrep_household_children_alias_calculatedfiled1.PNG","2.0proposed design1.jpg","2.0proposed design2.jpg","2.0proposed design3.PNG","3.1.1main.PNG","3.1.1main0.PNG","3.1.1main01.PNG","3.1.1main1image1.PNG","3.1.1main1image2.PNG","3.1.1main3icon1.PNG","3.1.1main4dashboard.PNG","3.2.1donut chart1.PNG","3.2.1donut chart2.PNG","3.2.1donut chart3.PNG","3.2.1donut chart4.PNG","3.2.1donut chart5.PNG","3.2.1donut chart6.PNG","3.2.1donut chart7.PNG","3.2.1donut chart8.PNG","3.2.1donut chart9.PNG","3.2.2CI1.PNG","3.2.2CI10.PNG","3.2.2CI11.PNG","3.2.2CI12.PNG","3.2.2CI13.PNG","3.2.2CI14.PNG","3.2.2CI15.PNG","3.2.2CI2.PNG","3.2.2CI3.PNG","3.2.2CI4.PNG","3.2.2CI5.PNG","3.2.2CI6.PNG","3.2.2CI7.PNG","3.2.2CI8.PNG","3.2.2CI9.PNG","3.2.3dashboard1.PNG","3.2.3dashboard2.PNG","3.2.3dashboard3.PNG","3.3Chart_sort by drag1.PNG","3.4.1diverging1.PNG","3.4.1diverging2.PNG","3.4.1diverging3.PNG","3.4.1diverging4.PNG","3.4.2sort1.PNG","3.4.3db1.PNG","3.4demographics1.PNG","3.51ht1.PNG","3.51selector1.PNG","3.5association1.PNG","3.6interaction1.PNG","3.6interaction2.PNG","4.1insight1.PNG","4.1insight2.PNG","4.1insight3.PNG","4.2insight1.PNG","4.2insight2.PNG","4.2insight3.PNG","4.3insight1.PNG","4.3insight2.PNG","4.3insight3.PNG","cri.PNG","dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/kePrint-0.0.1/kePrint.js","dataviz-makeover-2_files/lightable-0.0.1/lightable.css","dataviz-makeover-2_files/popper-2.6.0/popper.min.js","dataviz-makeover-2_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-2_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-2_files/tippy-6.2.7/tippy.css","dataviz-makeover-2_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js","snapshot.docx"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+<meta name="distill:offset" content="../.."/>
+
+<script type="application/javascript">
+
+  window.headroom_prevent_pin = false;
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // initialize headroom for banner
+    var header = $('header').get(0);
+    var headerHeight = header.offsetHeight;
+    var headroom = new Headroom(header, {
+      tolerance: 5,
+      onPin : function() {
+        if (window.headroom_prevent_pin) {
+          window.headroom_prevent_pin = false;
+          headroom.unpin();
+        }
+      }
+    });
+    headroom.init();
+    if(window.location.hash)
+      headroom.unpin();
+    $(header).addClass('headroom--transition');
+
+    // offset scroll location for banner on hash change
+    // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+    window.addEventListener("hashchange", function(event) {
+      window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+    });
+
+    // responsive menu
+    $('.distill-site-header').each(function(i, val) {
+      var topnav = $(this);
+      var toggle = topnav.find('.nav-toggle');
+      toggle.on('click', function() {
+        topnav.toggleClass('responsive');
+      });
+    });
+
+    // nav dropdowns
+    $('.nav-dropbtn').click(function(e) {
+      $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+      $(this).parent().siblings('.nav-dropdown')
+         .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $("body").click(function(e){
+      $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $(".nav-dropdown").click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<style type="text/css">
+
+/* Theme (user-documented overrideables for nav appearance) */
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #0F2E3D;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+.distill-site-header {
+
+}
+
+.distill-site-footer {
+
+}
+
+
+/* Site Header */
+
+.distill-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.distill-site-header .nav-left {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header .nav-left {
+    margin-left: 0;
+  }
+}
+
+
+.distill-site-header .nav-right {
+  float: right;
+  margin-right: 8px;
+}
+
+.distill-site-header a,
+.distill-site-header .title {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 10px 14px 10px;
+}
+
+.distill-site-header .title {
+  font-size: 18px;
+  min-width: 150px;
+}
+
+.distill-site-header .logo {
+  padding: 0;
+}
+
+.distill-site-header .logo img {
+  display: none;
+  max-height: 20px;
+  width: auto;
+  margin-bottom: -4px;
+}
+
+.distill-site-header .nav-image img {
+  max-height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .distill-site-header .logo img {
+    display: inline-block;
+  }
+  .distill-site-header .nav-left {
+    margin-left: 20px;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 20px;
+  }
+  .distill-site-header .title {
+    padding-left: 12px;
+  }
+}
+
+
+.distill-site-header .nav-toggle {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-dropdown .nav-dropbtn {
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 16px 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown-content hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown-active {
+  display: block;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+  color: black;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-content .nav-dropdown-header {
+  display: block;
+  padding: 5px 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999999;
+  white-space: nowrap;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+  color: white;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-right .nav-dropdown-content {
+  margin-left: -45%;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
+    float: right;
+    display: block;
+  }
+  .distill-site-header .title {
+    margin-left: 0;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 0;
+  }
+  .distill-site-header {
+    overflow: hidden;
+  }
+  .nav-right .nav-dropdown-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-header.responsive {position: relative; min-height: 500px; }
+  .distill-site-header.responsive a.nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
+    display: block;
+    text-align: left;
+  }
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
+    width: 100%;
+  }
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Site Footer */
+
+.distill-site-footer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* Headroom */
+
+d-title {
+  padding-top: 6rem;
+}
+
+@media print {
+  d-title {
+    padding-top: 4rem;
+  }
+}
+
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+/* adjust viewport for navbar height */
+/* helps vertically center bootstrap (non-distill) content */
+.min-vh-100 {
+  min-height: calc(100vh - 100px) !important;
+}
+
+</style>
+
+<script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+<script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
+<script src="../../site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+<script src="../../site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+<script type="application/javascript">
+
+function getMeta(metaName) {
+  var metas = document.getElementsByTagName('meta');
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute('name') === metaName) {
+      return metas[i].getAttribute('content');
+    }
+  }
+  return '';
+}
+
+function offsetURL(url) {
+  var offset = getMeta('distill:offset');
+  return offset ? offset + '/' + url : url;
+}
+
+function createFuseIndex() {
+
+  // create fuse index
+  var options = {
+    keys: [
+      { name: 'title', weight: 20 },
+      { name: 'categories', weight: 15 },
+      { name: 'description', weight: 10 },
+      { name: 'contents', weight: 5 },
+    ],
+    ignoreLocation: true,
+    threshold: 0
+  };
+  var fuse = new window.Fuse([], options);
+
+  // fetch the main search.json
+  return fetch(offsetURL('search.json'))
+    .then(function(response) {
+      if (response.status == 200) {
+        return response.json().then(function(json) {
+          // index main articles
+          json.articles.forEach(function(article) {
+            fuse.add(article);
+          });
+          // download collections and index their articles
+          return Promise.all(json.collections.map(function(collection) {
+            return fetch(offsetURL(collection)).then(function(response) {
+              if (response.status === 200) {
+                return response.json().then(function(articles) {
+                  articles.forEach(function(article) {
+                    fuse.add(article);
+                  });
+                })
+              } else {
+                return Promise.reject(
+                  new Error('Unexpected status from search index request: ' +
+                            response.status)
+                );
+              }
+            });
+          })).then(function() {
+            return fuse;
+          });
+        });
+
+      } else {
+        return Promise.reject(
+          new Error('Unexpected status from search index request: ' +
+                      response.status)
+        );
+      }
+    });
+}
+
+window.document.addEventListener("DOMContentLoaded", function (event) {
+
+  // get search element (bail if we don't have one)
+  var searchEl = window.document.getElementById('distill-search');
+  if (!searchEl)
+    return;
+
+  createFuseIndex()
+    .then(function(fuse) {
+
+      // make search box visible
+      searchEl.classList.remove('hidden');
+
+      // initialize autocomplete
+      var options = {
+        autoselect: true,
+        hint: false,
+        minLength: 2,
+      };
+      window.autocomplete(searchEl, options, [{
+        source: function(query, callback) {
+          const searchOptions = {
+            isCaseSensitive: false,
+            shouldSort: true,
+            minMatchCharLength: 2,
+            limit: 10,
+          };
+          var results = fuse.search(query, searchOptions);
+          callback(results
+            .map(function(result) { return result.item; })
+          );
+        },
+        templates: {
+          suggestion: function(suggestion) {
+            var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+              ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+              : '';
+            var html = `
+              <div class="search-item">
+                <h3>${suggestion.title}</h3>
+                <div class="search-item-description">
+                  ${suggestion.description || ''}
+                </div>
+                <div class="search-item-preview">
+                  ${img}
+                </div>
+              </div>
+            `;
+            return html;
+          }
+        }
+      }]).on('autocomplete:selected', function(event, suggestion) {
+        window.location.href = offsetURL(suggestion.path);
+      });
+      // remove inline display style on autocompleter (we want to
+      // manage responsive display via css)
+      $('.algolia-autocomplete').css("display", "");
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
+});
+
+</script>
+
+<style type="text/css">
+
+.nav-search {
+  font-size: x-small;
+}
+
+/* Algolioa Autocomplete */
+
+.algolia-autocomplete {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: sub;
+  background-color: white;
+  color: black;
+  padding: 6px;
+  padding-top: 8px;
+  padding-bottom: 0;
+  border-radius: 6px;
+  border: 1px #0F2E3D solid;
+  width: 180px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-nav .algolia-autocomplete {
+    display: none;
+    visibility: hidden;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete {
+    display: inline-block;
+    visibility: visible;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+    margin-left: 0;
+    width: 400px;
+    max-height: 400px;
+  }
+}
+
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+  width: 90%;
+  outline: none;
+  border: none;
+}
+
+.algolia-autocomplete .aa-hint {
+  color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 550px;
+  max-height: 70vh;
+  overflow-x: visible;
+  overflow-y: scroll;
+  padding: 5px;
+  margin-top: 3px;
+  margin-left: -150px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+  border-top: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+  border-bottom: none;
+  margin-bottom: 2px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+  overflow: hidden;
+  font-size: 0.8em;
+  line-height: 1.4em;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+  font-size: 1rem;
+  margin-block-start: 0;
+  margin-block-end: 5px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+  display: inline-block;
+  overflow: hidden;
+  height: 2.8em;
+  width: 80%;
+  margin-right: 4%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+  display: inline-block;
+  width: 15%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+  height: 3em;
+  width: auto;
+  display: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+  display: initial;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #eee;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+</style>
+
+
+<!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+<style type="text/css">
+
+body {
+  background-color: white;
+}
+
+.pandoc-table {
+  width: 100%;
+}
+
+.pandoc-table>caption {
+  margin-bottom: 10px;
+}
+
+.pandoc-table th:not([align]) {
+  text-align: left;
+}
+
+.pagedtable-footer {
+  font-size: 15px;
+}
+
+d-byline .byline {
+  grid-template-columns: 2fr 2fr;
+}
+
+d-byline .byline h3 {
+  margin-block-start: 1.5em;
+}
+
+d-byline .byline .authors-affiliations h3 {
+  margin-block-start: 0.5em;
+}
+
+.authors-affiliations .orcid-id {
+  width: 16px;
+  height:16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
+
+d-title .dt-tags {
+  margin-top: 1em;
+  grid-column: text;
+}
+
+.dt-tags .dt-tag {
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0em 0.4em;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  font-size: 70%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+d-article table.gt_table td,
+d-article table.gt_table th {
+  border-bottom: none;
+}
+
+.html-widget {
+  margin-bottom: 2.0em;
+}
+
+.l-screen-inset {
+  padding-right: 16px;
+}
+
+.l-screen .caption {
+  margin-left: 10px;
+}
+
+.shaded {
+  background: rgb(247, 247, 247);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .html-widget {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .shaded-content {
+  background: white;
+}
+
+.text-output {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+d-article {
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+}
+
+d-appendix {
+  padding-top: 30px;
+}
+
+d-article>p>img {
+  width: 100%;
+}
+
+d-article h2 {
+  margin: 1rem 0 1.5rem 0;
+}
+
+d-article h3 {
+  margin-top: 1.5rem;
+}
+
+d-article iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.0em;
+  width: 100%;
+}
+
+/* Tweak code blocks */
+
+d-article div.sourceCode code,
+d-article pre code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: auto;
+}
+
+d-article div.sourceCode {
+  background-color: white;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 10px;
+  font-size: 12px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+d-article pre {
+  font-size: 12px;
+  color: black;
+  background: none;
+  margin-top: 0;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+d-article pre a {
+  border-bottom: none;
+}
+
+d-article pre a:hover {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+d-article details {
+  grid-column: text;
+  margin-bottom: 0.8em;
+}
+
+@media(min-width: 768px) {
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: visible !important;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+d-article pre {
+  font-size: 14px;
+}
+
+}
+
+figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* CSS for d-contents */
+
+.d-contents {
+  grid-column: text;
+  color: rgba(0,0,0,0.8);
+  font-size: 0.9em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 0.25em;
+  justify-self: start;
+}
+
+@media(min-width: 1000px) {
+  .d-contents.d-contents-float {
+    height: 0;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    padding-right: 3em;
+    padding-left: 2em;
+  }
+}
+
+.d-contents nav h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.d-contents li {
+  list-style-type: none
+}
+
+.d-contents nav > ul {
+  padding-left: 0;
+}
+
+.d-contents ul {
+  padding-left: 1em
+}
+
+.d-contents nav ul li {
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
+}
+
+.d-contents nav a {
+  font-size: 13px;
+  border-bottom: none;
+  text-decoration: none
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.d-contents nav a:hover {
+  text-decoration: underline solid rgba(0, 0, 0, 0.6)
+}
+
+.d-contents nav > ul > li > a {
+  font-weight: 600;
+}
+
+.d-contents nav > ul > li > ul {
+  font-weight: inherit;
+}
+
+.d-contents nav > ul > li > ul > li {
+  margin-top: 0.2em;
+}
+
+
+.d-contents nav ul {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.d-article-with-toc h2:nth-child(2) {
+  margin-top: 0;
+}
+
+
+/* Figure */
+
+.figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.figure .caption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.figure .caption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.figure .caption b,
+.figure .caption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+/* Citations */
+
+d-article .citation {
+  color: inherit;
+  cursor: inherit;
+}
+
+div.hanging-indent{
+  margin-left: 1em; text-indent: -1em;
+}
+
+/* Citation hover box */
+
+.tippy-box[data-theme~=light-border] {
+  background-color: rgba(250, 250, 250, 0.95);
+}
+
+.tippy-content > p {
+  margin-bottom: 0;
+  padding: 2px;
+}
+
+
+/* Tweak 1000px media break to show more text */
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+  figure .caption, .figure .caption, figure figcaption {
+    font-size: 13px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+/* Get the citation styles for the appendix (not auto-injected on render since
+   we do our own rendering of the citation appendix) */
+
+d-appendix .citation-appendix,
+.d-appendix .citation-appendix {
+  font-size: 11px;
+  line-height: 15px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 18px;
+  border-radius: 3px;
+  color: rgba(150, 150, 150, 1);
+  overflow: hidden;
+  margin-top: -12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Include appendix styles here so they can be overridden */
+
+d-appendix {
+  contain: layout style;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-top: 60px;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0,0,0,0.5);
+  padding-top: 60px;
+  padding-bottom: 48px;
+}
+
+d-appendix h3 {
+  grid-column: page-start / text-start;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.65);
+}
+
+d-appendix h3 + * {
+  margin-top: 1em;
+}
+
+d-appendix ol {
+  padding: 0 0 0 15px;
+}
+
+@media (min-width: 768px) {
+  d-appendix ol {
+    padding: 0 0 0 30px;
+    margin-left: -30px;
+  }
+}
+
+d-appendix li {
+  margin-bottom: 1em;
+}
+
+d-appendix a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+d-appendix > * {
+  grid-column: text;
+}
+
+d-appendix > d-footnote-list,
+d-appendix > d-citation-list,
+d-appendix > distill-appendix {
+  grid-column: screen;
+}
+
+/* Include footnote styles here so they can be overridden */
+
+d-footnote-list {
+  contain: layout style;
+}
+
+d-footnote-list > * {
+  grid-column: text;
+}
+
+d-footnote-list a.footnote-backlink {
+  color: rgba(0,0,0,0.3);
+  padding-left: 0.5em;
+}
+
+
+
+/* Anchor.js */
+
+.anchorjs-link {
+  /*transition: all .25s linear; */
+  text-decoration: none;
+  border-bottom: none;
+}
+*:hover > .anchorjs-link {
+  margin-left: -1.125em !important;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Social footer */
+
+.social_footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.67);
+}
+
+.disqus-comments {
+  margin-right: 30px;
+}
+
+.disqus-comment-count {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.article-sharing a {
+  border-bottom: none;
+  margin-right: 8px;
+}
+
+.article-sharing a:hover {
+  border-bottom: none;
+}
+
+.sidebar-section.subscribe {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.subscribe p {
+  margin-bottom: 0.5em;
+}
+
+
+.article-footer .subscribe {
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+
+.sidebar-section.custom {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.custom p {
+  margin-bottom: 0.5em;
+}
+
+/* Styles for listing layout (hide title) */
+.layout-listing d-title, .layout-listing .d-title {
+  display: none;
+}
+
+/* Styles for posts lists (not auto-injected) */
+
+
+.posts-with-sidebar {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.posts-list .description h2,
+.posts-list .description p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.posts-list .description h2 {
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.posts-list h2.post-tag {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
+}
+.posts-list {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.posts-list .post-preview {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+}
+
+.post-preview-last {
+  border-bottom: none !important;
+}
+
+.posts-list .posts-list-caption {
+  grid-column: screen;
+  font-weight: 400;
+}
+
+.posts-list .post-preview h2 {
+  margin: 0 0 6px 0;
+  line-height: 1.2em;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.posts-list .post-preview p {
+  margin: 0 0 12px 0;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+
+.posts-list .post-preview .thumbnail {
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  position: relative;
+  max-width: 500px;
+}
+.posts-list .post-preview img {
+  width: 100%;
+  display: block;
+}
+
+.posts-list .metadata {
+  font-size: 12px;
+  line-height: 1.4em;
+  margin-bottom: 18px;
+}
+
+.posts-list .metadata > * {
+  display: inline-block;
+}
+
+.posts-list .metadata .publishedDate {
+  margin-right: 2em;
+}
+
+.posts-list .metadata .dt-authors {
+  display: block;
+  margin-top: 0.3em;
+  margin-right: 2em;
+}
+
+.posts-list .dt-tags {
+  display: block;
+  line-height: 1em;
+}
+
+.posts-list .dt-tags .dt-tag {
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0.3em 0.4em;
+  margin-right: 0.2em;
+  margin-bottom: 0.4em;
+  font-size: 60%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.posts-list img {
+  opacity: 1;
+}
+
+.posts-list img[data-src] {
+  opacity: 0;
+}
+
+.posts-more {
+  clear: both;
+}
+
+
+.posts-sidebar {
+  font-size: 16px;
+}
+
+.posts-sidebar h3 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0;
+}
+
+.categories li>a {
+  border-bottom: none;
+}
+
+.categories li>a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.categories .active {
+  font-weight: 600;
+}
+
+.categories .category-count {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+@media(min-width: 768px) {
+  .posts-list .post-preview h2 {
+    font-size: 26px;
+  }
+  .posts-list .post-preview .thumbnail {
+    float: right;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .posts-list .post-preview .description {
+    float: left;
+    width: 45%;
+  }
+  .posts-list .post-preview .metadata {
+    float: left;
+    width: 20%;
+    margin-top: 8px;
+  }
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  .posts-with-sidebar .posts-list {
+    float: left;
+    width: 75%;
+  }
+  .posts-with-sidebar .posts-sidebar {
+    float: right;
+    width: 20%;
+    margin-top: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+
+/* Improve display for browsers without grid (IE/Edge <= 15) */
+
+.downlevel {
+  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.downlevel .d-title {
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.downlevel .d-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+.downlevel .d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  margin-top: 0;
+}
+
+.downlevel .d-byline {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.8em;
+}
+
+.downlevel .section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.downlevel .d-article {
+  font-size: 1.06rem;
+  line-height: 1.7em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+
+.downlevel .d-appendix {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.downlevel .footnotes ol {
+  padding-left: 13px;
+}
+
+.downlevel .base-grid,
+.downlevel .distill-header,
+.downlevel .d-title,
+.downlevel .d-abstract,
+.downlevel .d-article,
+.downlevel .d-appendix,
+.downlevel .distill-appendix,
+.downlevel .d-byline,
+.downlevel .d-footnote-list,
+.downlevel .d-citation-list,
+.downlevel .distill-footer,
+.downlevel .appendix-bottom,
+.downlevel .posts-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media(min-width: 768px) {
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 900px;
+}
+}
+
+.downlevel pre code {
+  display: block;
+  border-left: 2px solid rgba(0, 0, 0, .1);
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+.downlevel code, .downlevel pre {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.downlevel .posts-list .post-preview {
+  color: inherit;
+}
+
+
+
+</style>
+
+<script type="application/javascript">
+
+function is_downlevel_browser() {
+  if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                 window.navigator.userAgent)) {
+    return true;
+  } else {
+    return window.load_distill_framework === undefined;
+  }
+}
+
+// show body when load is complete
+function on_load_complete() {
+
+  // add anchors
+  if (window.anchors) {
+    window.anchors.options.placement = 'left';
+    window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+  }
+
+
+  // set body to visible
+  document.body.style.visibility = 'visible';
+
+  // force redraw for leaflet widgets
+  if (window.HTMLWidgets) {
+    var maps = window.HTMLWidgets.findAll(".leaflet");
+    $.each(maps, function(i, el) {
+      var map = this.getMap();
+      map.invalidateSize();
+      map.eachLayer(function(layer) {
+        if (layer instanceof L.TileLayer)
+          layer.redraw();
+      });
+    });
+  }
+
+  // trigger 'shown' so htmlwidgets resize
+  $('d-article').trigger('shown');
+}
+
+function init_distill() {
+
+  init_common();
+
+  // create front matter
+  var front_matter = $('<d-front-matter></d-front-matter>');
+  $('#distill-front-matter').wrap(front_matter);
+
+  // create d-title
+  $('.d-title').changeElementType('d-title');
+
+  // create d-byline
+  var byline = $('<d-byline></d-byline>');
+  $('.d-byline').replaceWith(byline);
+
+  // create d-article
+  var article = $('<d-article></d-article>');
+  $('.d-article').wrap(article).children().unwrap();
+
+  // move posts container into article
+  $('.posts-container').appendTo($('d-article'));
+
+  // create d-appendix
+  $('.d-appendix').changeElementType('d-appendix');
+
+  // flag indicating that we have appendix items
+  var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+  // replace footnotes with <d-footnote>
+  $('.footnote-ref').each(function(i, val) {
+    appendix = true;
+    var href = $(this).attr('href');
+    var id = href.replace('#', '');
+    var fn = $('#' + id);
+    var fn_p = $('#' + id + '>p');
+    fn_p.find('.footnote-back').remove();
+    var text = fn_p.html();
+    var dtfn = $('<d-footnote></d-footnote>');
+    dtfn.html(text);
+    $(this).replaceWith(dtfn);
+  });
+  // remove footnotes
+  $('.footnotes').remove();
+
+  // move refs into #references-listing
+  $('#references-listing').replaceWith($('#refs'));
+
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    var id = $(this).attr('id');
+    $('.d-contents a[href="#' + id + '"]').parent().remove();
+    appendix = true;
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+  });
+
+  // show d-appendix if we have appendix content
+  $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+  // localize layout chunks to just output
+  $('.layout-chunk').each(function(i, val) {
+
+    // capture layout
+    var layout = $(this).attr('data-layout');
+
+    // apply layout to markdown level block elements
+    var elements = $(this).children().not('details, div.sourceCode, pre, script');
+    elements.each(function(i, el) {
+      var layout_div = $('<div class="' + layout + '"></div>');
+      if (layout_div.hasClass('shaded')) {
+        var shaded_content = $('<div class="shaded-content"></div>');
+        $(this).wrap(shaded_content);
+        $(this).parent().wrap(layout_div);
+      } else {
+        $(this).wrap(layout_div);
+      }
+    });
+
+
+    // unwrap the layout-chunk div
+    $(this).children().unwrap();
+  });
+
+  // remove code block used to force  highlighting css
+  $('.distill-force-highlighting-css').parent().remove();
+
+  // remove empty line numbers inserted by pandoc when using a
+  // custom syntax highlighting theme
+  $('code.sourceCode a:empty').remove();
+
+  // load distill framework
+  load_distill_framework();
+
+  // wait for window.distillRunlevel == 4 to do post processing
+  function distill_post_process() {
+
+    if (!window.distillRunlevel || window.distillRunlevel < 4)
+      return;
+
+    // hide author/affiliations entirely if we have no authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+    if (!have_authors)
+      $('d-byline').addClass('hidden');
+
+    // article with toc class
+    $('.d-contents').parent().addClass('d-article-with-toc');
+
+    // strip links that point to #
+    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+    // add orcid ids
+    $('.authors-affiliations').find('.author').each(function(i, el) {
+      var orcid_id = front_matter.authors[i].orcidID;
+      if (orcid_id) {
+        var a = $('<a></a>');
+        a.attr('href', 'https://orcid.org/' + orcid_id);
+        var img = $('<img></img>');
+        img.addClass('orcid-id');
+        img.attr('alt', 'ORCID ID');
+        img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+        a.append(img);
+        $(this).append(a);
+      }
+    });
+
+    // hide elements of author/affiliations grid that have no value
+    function hide_byline_column(caption) {
+      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+    }
+
+    // affiliations
+    var have_affiliations = false;
+    for (var i = 0; i<front_matter.authors.length; ++i) {
+      var author = front_matter.authors[i];
+      if (author.affiliation !== "&nbsp;") {
+        have_affiliations = true;
+        break;
+      }
+    }
+    if (!have_affiliations)
+      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+    // published date
+    if (!front_matter.publishedDate)
+      hide_byline_column("Published");
+
+    // document object identifier
+    var doi = $('d-byline').find('h3:contains("DOI")');
+    var doi_p = doi.next().empty();
+    if (!front_matter.doi) {
+      // if we have a citation and valid citationText then link to that
+      if ($('#citation').length > 0 && front_matter.citationText) {
+        doi.html('Citation');
+        $('<a href="#citation"></a>')
+          .text(front_matter.citationText)
+          .appendTo(doi_p);
+      } else {
+        hide_byline_column("DOI");
+      }
+    } else {
+      $('<a></a>')
+         .attr('href', "https://doi.org/" + front_matter.doi)
+         .html(front_matter.doi)
+         .appendTo(doi_p);
+    }
+
+     // change plural form of authors/affiliations
+    if (front_matter.authors.length === 1) {
+      var grid = $('.authors-affiliations');
+      grid.children('h3:contains("Authors")').text('Author');
+      grid.children('h3:contains("Affiliations")').text('Affiliation');
+    }
+
+    // remove d-appendix and d-footnote-list local styles
+    $('d-appendix > style:first-child').remove();
+    $('d-footnote-list > style:first-child').remove();
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // hoverable references
+    $('span.citation[data-cites]').each(function() {
+      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      window.tippy(this, {
+        allowHTML: true,
+        content: refHtml,
+        maxWidth: 500,
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start'
+      });
+    });
+
+    // clear polling timer
+    clearInterval(tid);
+
+    // show body now that everything is ready
+    on_load_complete();
+  }
+
+  var tid = setInterval(distill_post_process, 50);
+  distill_post_process();
+
+}
+
+function init_downlevel() {
+
+  init_common();
+
+   // insert hr after d-title
+  $('.d-title').after($('<hr class="section-separator"/>'));
+
+  // check if we have authors
+  var front_matter = JSON.parse($("#distill-front-matter").html());
+  var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+  // manage byline/border
+  if (!have_authors)
+    $('.d-byline').remove();
+  $('.d-byline').after($('<hr class="section-separator"/>'));
+  $('.d-byline a').remove();
+
+  // remove toc
+  $('.d-contents').remove();
+
+  // move appendix elements
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+  });
+
+
+  // inject headers into references and footnotes
+  var refs_header = $('<h3></h3>');
+  refs_header.text('References');
+  $('#refs').prepend(refs_header);
+
+  var footnotes_header = $('<h3></h3');
+  footnotes_header.text('Footnotes');
+  $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+  // move appendix-bottom entries to the bottom
+  $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+  $('.appendix-bottom').remove();
+
+  // remove appendix if it's empty
+  if ($('.d-appendix').children().length === 0)
+    $('.d-appendix').remove();
+
+  // prepend separator above appendix
+  $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+  // trim code
+  $('pre>code').each(function(i, val) {
+    $(this).html($.trim($(this).html()));
+  });
+
+  // move posts-container right before article
+  $('.posts-container').insertBefore($('.d-article'));
+
+  $('body').addClass('downlevel');
+
+  on_load_complete();
+}
+
+
+function init_common() {
+
+  // jquery plugin to change element types
+  (function($) {
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      this.replaceWith(function() {
+        return $("<" + newType + "/>", attrs).append($(this).contents());
+      });
+    };
+  })(jQuery);
+
+  // prevent underline for linked images
+  $('a > img').parent().css({'border-bottom' : 'none'});
+
+  // mark non-body figures created by knitr chunks as 100% width
+  $('.layout-chunk').each(function(i, val) {
+    var figures = $(this).find('img, .html-widget');
+    if ($(this).attr('data-layout') !== "l-body") {
+      figures.css('width', '100%');
+    } else {
+      figures.css('max-width', '100%');
+      figures.filter("[width]").each(function(i, val) {
+        var fig = $(this);
+        fig.css('width', fig.attr('width') + 'px');
+      });
+
+    }
+  });
+
+  // auto-append index.html to post-preview links in file: protocol
+  // and in rstudio ide preview
+  $('.post-preview').each(function(i, val) {
+    if (window.location.protocol === "file:")
+      $(this).attr('href', $(this).attr('href') + "index.html");
+  });
+
+  // get rid of index.html references in header
+  if (window.location.protocol !== "file:") {
+    $('.distill-site-header a[href]').each(function(i,val) {
+      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+    });
+  }
+
+  // add class to pandoc style tables
+  $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+  $('.kable-table').children('table').addClass('pandoc-table');
+
+  // add figcaption style to table captions
+  $('caption').parent('table').addClass("figcaption");
+
+  // initialize posts list
+  if (window.init_posts_list)
+    window.init_posts_list();
+
+  // implmement disqus comment link
+  $('.disqus-comment-count').click(function() {
+    window.headroom_prevent_pin = true;
+    $('#disqus_thread').toggleClass('hidden');
+    if (!$('#disqus_thread').hasClass('hidden')) {
+      var offset = $(this).offset();
+      $(window).resize();
+      $('html, body').animate({
+        scrollTop: offset.top - 35
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (is_downlevel_browser())
+    init_downlevel();
+  else
+    window.addEventListener('WebComponentsReady', init_distill);
+});
+
+</script>
+
+<!--/radix_placeholder_distill-->
+  <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+<!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"DataViz Makeover 2","description":"A short description of the post.","authors":[{"author":"LI Hongting","authorURL":"https://www.linkedin.com/in/lihongting/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-19T00:00:00.000+08:00","citationText":"Hongting, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="../../index.html" class="title">Hongting's Blog</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
+<a href="../../index.html">Home</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+DataViz Makeover
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="../../posts\2021-01-23-dataviz-makeover1\index.html">DataViz Makeover 1</a>
+</div>
+</div>
+<a href="../../vap.html">Visual Analytics Project</a>
+<a href="../../about.html">About</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>DataViz Makeover 2</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>A short description of the post.</p></p>
+</div>
+
+<div class="d-byline">
+  LI Hongting <a href="https://www.linkedin.com/in/lihongting/" class="uri">https://www.linkedin.com/in/lihongting/</a> 
+  
+<br/>02-19-2021
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#critiques-and-suggestions">1 Critiques and Suggestions</a><ul>
+<li><a href="#clarity">1.1 Clarity</a></li>
+<li><a href="#aesthetic">1.2 Aesthetic</a></li>
+</ul></li>
+<li><a href="#sketch-of-proposed-design">2 Sketch of Proposed Design</a></li>
+<li><a href="#steps-to-create-dataviz-using-tableau">3 Steps to Create Dataviz Using Tableau</a><ul>
+<li><a href="#data-preparation">3.1 Data preparation</a></li>
+<li><a href="#main-tab">3.2 Main tab:</a></li>
+<li><a href="#overview">3.3 Overview</a></li>
+<li><a href="#demographics">3.4 Demographics</a></li>
+<li><a href="#bivariate-correlation-analysis">3.5 Bivariate correlation analysis</a></li>
+<li><a href="#interaction-among-dashboards">3.6 Interaction among dashboards</a></li>
+</ul></li>
+<li><a href="#discussion">4 Discussion</a><ul>
+<li><a href="#insight-1-united-kindom-has-most-respondents-strongly-agreed-to-vaccination-while-france-is-the-one-most-against-3-asian-countries-has-most-proportion-being-neutral">4.1 Insight 1: United Kindom has most respondents strongly agreed to vaccination while France is the one most against, 3 Asian countries has most proportion being neutral</a></li>
+<li><a href="#insight-2-distribution-by-gender-and-age-group-show-a-pattern">4.2 Insight 2: Distribution by gender and age group show a pattern</a></li>
+<li><a href="#insight-3-trust-on-government-is-positively-correlated-to-willingness-level-while-side-effect-is-on-the-opposite-and-time-helps.">4.3 Insight 3: Trust on government is positively correlated to willingness level, while side effect is on the opposite, and time helps.</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<p>Data Visualisation (Tableau Online): <a href="">To vaccine or not vaccine: what is public view?</a></p>
+<p>Data Source: <a href="https://github.com/YouGov-Data/covid-19-tracker">Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub</a></p>
+<h1 id="critiques-and-suggestions">1 Critiques and Suggestions</h1>
+<p>The original data visualization intended to answer two questions, firstly, respondants from which country shows higher willingness for vaccination, and secondly, percentage of respondants agreed for vaccination. Below discussed clarity and aesthetics of the original DataViz.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:cri"></span>
+<img src="cri.PNG" alt="Critic original DataVi" width="100%" />
+<p class="caption">
+Figure 1: Critic original DataVi
+</p>
+</div>
+</div>
+<h3 id="clarity">1.1 Clarity</h3>
+<div class="layout-chunk" data-layout="l-body">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+SN
+</th>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+Critiques
+</th>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+Suggestions
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+1
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+Author’s intention for left side chart is to answer question, which country has higher willingness level for vaccination. Bar chart is used for Likert data with 5 categories. It makes audiance difficult to interpret public view is towards agreement or disagreement.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+A normal bar chart can be used when there is two categories. For multi-category Liker data, diverging stacked bar chart is proposed.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+2
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+Right side chart is better designed to answer the question posed by author.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+We can follow the idea to present single view category. Proportion is with uncertainty, it varies with proportion and sample size. Hence, confidence interval is added and represent the graph with dot. Besides, to further enhance the chart with interactivity, all willingness level can be presented by selection and also included 4 common significance level for confidence interval.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+3
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+Left side chart is ordered aphabetically, reader need to eye ball to find out the trends. Right chart does well by soring and a good practice, which 1st chart is not in terms of sorting.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+To improve from here, interactive features are proposed to allow readers to select which willingness level be used for sorting.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="aesthetic">1.2 Aesthetic</h3>
+<div class="layout-chunk" data-layout="l-body">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+SN
+</th>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+Critiques
+</th>
+<th style="text-align:left;color: white !important;background-color: black !important;text-align: left;">
+Suggestions
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+4
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+5 completely different colors are used for bar chart. It is too colorful, and not helpful on grouping views on same or opposite side.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+Will use same color group for similar Likrt categories, e.g. dark and light blue for Strongly agree and Agree.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+5
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+Position of legend is located at the upper left color and leave a lot of white space.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+Use colored word as legend and position near the plot to avoid whitespace.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;min-width: 3em; border-bottom: 1px solid">
+6
+</td>
+<td style="text-align:left;width: 25em; border-bottom: 1px solid">
+Legend title and content is not well elaborated, readers might think what is Vac 1 and the 5 confusing categories.
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+Legend title will be avoided by using colored words. 5 categories will be elaborated with text.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="sketch-of-proposed-design">2 Sketch of Proposed Design</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:proposal"></span>
+<img src="2.0proposed%20design3.PNG" alt="Sketch of proposed design" width="400" height="100%" />
+<p class="caption">
+Figure 2: Sketch of proposed design
+</p>
+</div>
+</div>
+<ul>
+<li>This DataViz makeover is designed with emphasis on interactivity and 3 topics. 4 dashboard pages are proposed.</li>
+<li>Main page focused on a brief introduction on Covid-19, Covid-19 vaccination and aim of this dashboard.</li>
+<li>Overview page discussed about sample size, number of countries participated in this survey. Overall willingness distribution is presented with a donut chart, where as country level view is represented with a dot chart with confidence interval.</li>
+<li>Demographics page allows reader to select interested demographic factors and presented in diverging bar chart. There is some interactivity between the two diverging bar charts, that is to say, selecting one catecory of breakdown measure 1 will be filterred and updated in second chart. This allows reader to have two level of details deep dive analysis.</li>
+<li>Association page is a bi-variate correlation analysis for categorical data. Two variables are willingness level and a selected factor, such as, worry level of having vaccination, or concern on size effects. The matrix will be presented with a highlight table, i.e. color will be coded by number of counts by combination.</li>
+<li>Other than above mentioned interactivity. 4 visualizations are represented by 4 different icons. Selection of icon will navigate the user to corresponding visualization.</li>
+</ul>
+<h1 id="steps-to-create-dataviz-using-tableau">3 Steps to Create Dataviz Using Tableau</h1>
+<h3 id="data-preparation">3.1 Data preparation</h3>
+<p>First, inspect data in excel, raw data consists of 31 csv files for survey results. Checking a few data, I found out that some file does not have Vac_1 column, some file with this column but with empty value as well. Then I used Python for a simple data consolidation and filtering. Firstly, import relevant Python packages, change working directory to csv file location and consolidate all 31 files.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:Datapreppython1"></span>
+<img src="1.01DataPrep_python1.PNG" alt="Data cleanning with Python 1" width="100%" />
+<p class="caption">
+Figure 3: Data cleanning with Python 1
+</p>
+</div>
+</div>
+<p>Then, investigate distinct value and counts for column vac_1, followed by selecting non-empty vac_1 entries and kept relevant columns for this DataViz study.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:Datapreppython2"></span>
+<img src="1.01DataPrep_python2.PNG" alt="Data cleanning with Python 2" width="100%" />
+<p class="caption">
+Figure 4: Data cleanning with Python 2
+</p>
+</div>
+</div>
+<p>Next, save consolidated dataframe to csv file and proceed with Tableau.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:Datapreppython3"></span>
+<img src="1.01DataPrep_python3.PNG" alt="Data cleanning with Python 3" width="100%" />
+<p class="caption">
+Figure 5: Data cleanning with Python 3
+</p>
+</div>
+</div>
+<p>Star off with Tableau, and drag over saved csv file to Connect to data page. Then, I go through all columns and codebook to identify areas to change.</p>
+<p>Firstly, I notice that countries do not start with capital letter. This is updated with Aliases function, by right clicking the upper left color triangle and choose Aliases. Then edit country name words to start with capital letter and repalce “-” with space.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:dataprep1"></span>
+<img src="1.1DataPrep_country1.PNG" alt="Update Country column with alias 1" width="400" />
+<p class="caption">
+Figure 6: Update Country column with alias 1
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:importdata2"></span>
+<img src="1.2DataPrep_country4.PNG" alt="Update Country column with alias 2" width="400" />
+<p class="caption">
+Figure 7: Update Country column with alias 2
+</p>
+</div>
+</div>
+<p>Next is to change measures such as vac_1 to the question, by double clicking column names. Similarly I edit alias for vac_1 values to “Strongly agree”, “Agree”, “Neutral”, “Disagree” and “Strongly disagree”. Similary, I updated other fields started with vac.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure">
+<img src="1.4DataPrep_Vac1_colname.PNG" alt="Rename vac1 as question content" width="200" />
+<p class="caption">
+(#fig:vac1_colname)Rename vac1 as question content
+</p>
+</div>
+</div>
+<p>Next, I find that “Household Children” and “Household Size” are all digits, but they have different meaning, some might be number of children/people in the household, some digit represent the question is not answered. This two columns are auto-identified as “Measure Values”, so I drag them over to “Measure Names” on a new sheet side bar.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:colmove1"></span>
+<img src="1.5DataPrep_household_size_move1.PNG" alt="Move data fields from Measure Values to Measure Names 1" width="200" />
+<p class="caption">
+Figure 8: Move data fields from Measure Values to Measure Names 1
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:colmove2"></span>
+<img src="1.6DataPrep_household_size_move2.PNG" alt="Move data fields from Measure Values to Measure Names 2" width="200" />
+<p class="caption">
+Figure 9: Move data fields from Measure Values to Measure Names 2
+</p>
+</div>
+</div>
+<p>Then I updated aliases for “Household Size”. However, when I attempt to edit for “Household Children” as below, Tableau generates an Error Code, which specified output data type.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:householdchildren1"></span>
+<img src="1.8DataPrep_household_children_alias.PNG" alt="Attempt to edit Aliases for Household Children" width="400" />
+<p class="caption">
+Figure 10: Attempt to edit Aliases for Household Children
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:householdchildren2"></span>
+<img src="1.10DataPrep_household_children_alias_calculatedfiled.PNG" alt="Error code for the attempt" width="400" />
+<p class="caption">
+Figure 11: Error code for the attempt
+</p>
+</div>
+</div>
+<p>Hence, a calculated field is used for recode “Household Children” by right click “Household Children” column name and choose “Create a Calculated Field..”. Besides, to simplify number of categories, values not specified in Codebook, e.g. 7, 8 and null are grouped as “Others”</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:hhouseholdchildren3"></span>
+<img src="1.12DataPrep_household_children_alias_calculatedfiled4.PNG" alt="Create a calculated field to recode Household Children" width="400" />
+<p class="caption">
+Figure 12: Create a calculated field to recode Household Children
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:householdchildren4"></span>
+<img src="1.11DataPrep_household_children_alias_calculatedfiled3.PNG" alt="Create a calculated field for " width="600" />
+<p class="caption">
+Figure 13: Create a calculated field for
+</p>
+</div>
+</div>
+<h3 id="main-tab">3.2 Main tab:</h3>
+<p>Below is overview of main tab. There are 10 elements in total, I group them into 3 categories. a. Element 1: an “Image” object b. Element 2, 3, 5, 7, 9 and 10: “Text” object c. Element 4, 6, 8: “Sheet”</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:main1"></span>
+<img src="3.1.1main.PNG" alt="Main page overview" width="600" />
+<p class="caption">
+Figure 14: Main page overview
+</p>
+</div>
+</div>
+<h4 id="creating-image-object">3.2.1 Creating “Image” object</h4>
+<p>To create an “Image” object, I created a Dashboard to begin with by clicking the tab with grid and + sign.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:32main0"></span>
+<img src="3.1.1main0.PNG" alt="Create a dashboard" width="400" />
+<p class="caption">
+Figure 15: Create a dashboard
+</p>
+</div>
+</div>
+<p>Then, I choose Dashobard size as “Generic Desktop (1366 x 768)” clicking the small triangles under “Size” pane.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:32main1"></span>
+<img src="3.1.1main01.PNG" alt="Choose dashboard size" width="300" />
+<p class="caption">
+Figure 16: Choose dashboard size
+</p>
+</div>
+</div>
+<p>Then, I select “Image” icon under “Objects” pane, drag and drop to dashboard. An “Edit Image Object” window will pop up, then I choose an image from my local drive by clicking “Choose”. Options to “Fit Image” and “Center Image” are also checked.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:32main1image1"></span>
+<img src="3.1.1main1image1.PNG" alt="Adding an Image object to Dashboard 1" width="400" />
+<p class="caption">
+Figure 17: Adding an Image object to Dashboard 1
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:32main1image2"></span>
+<img src="3.1.1main1image2.PNG" alt="Adding an Image object to Dashboard 2" width="400" />
+<p class="caption">
+Figure 18: Adding an Image object to Dashboard 2
+</p>
+</div>
+</div>
+<h4 id="creating-text-object">3.2.2 Creating “Text” object</h4>
+<p>Similar to “Image” object, “Text” object can be found under “Objects” pane. After dragging and dropping, a text box window will top up. Then we can add texts with formatting color, font, size, bold etc.</p>
+<p>Note for element 10, the hyperlink is generated from excel and pasted to Tableau.</p>
+<h4 id="creating-a-sheet-for-actions-i.e.-interactivity">3.2.3 Creating a “Sheet” for “Actions”, i.e. interactivity</h4>
+<p>Though we see there is no much difference on element 1 and element 4. However, as mentioned in Section 2, I would like to add interactivity on element 4 for navigation. A straightforward image object does not allow “Actions”. Hence, a sheet is needed.</p>
+<p>To start with, I create a calculated field to host the icon, named as “IconOverview” and valued at 0.</p>
+<p>Then, I create a new sheet, under “Marks” pane, choose “Shape” as mark by clicking the small triangle to expand the drop-down list.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:32icon1"></span>
+<img src="3.1.1main3icon1.PNG" alt="Create an image icon for interactivity" width="200" />
+<p class="caption">
+Figure 19: Create an image icon for interactivity
+</p>
+</div>
+</div>
+<h4 id="adding-sheet-to-a-dashboard">3.2.4 Adding sheet to a dashboard</h4>
+<p>Similar to adding objects, sheets are added by dragging and dropping as well. All visible sheets can be found on “Sheets” pane, choose sheet of interest and move to desired position.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:32dashboard"></span>
+<img src="3.1.1main4dashboard.PNG" alt="Add Sheet to a dashboard" width="600" />
+<p class="caption">
+Figure 20: Add Sheet to a dashboard
+</p>
+</div>
+</div>
+<p>Last but not least, we hover around and align the 10 elements. Also note that the navigation function is not enabled yet, as we need to create all four dashboards before adding actions.</p>
+<h3 id="overview">3.3 Overview</h3>
+<p>Below is overview of Overview tab. We can see there are 11 elements, similarly we group them as below.<br />
+a. Element 1: an “Image” object b. Element 2, 8, 11: “Text” object c. Element 3, 7: “Blank” object d. Element 4, 5, 6; “sheet” for navigation e. Element 9: a donut chart f. Element 10: circle chart with confidence interval plus 2 filters</p>
+<p>Point a, b, d we have discussed in Section 3.2, I will focus on point c, e and f. </p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:overview1"></span>
+<img src="3.1.1main.PNG" alt="Main page overview" width="100%" />
+<p class="caption">
+Figure 21: Main page overview
+</p>
+</div>
+</div>
+<h4 id="creating-a-blank-object">3.3.1 Creating a “Blank” object</h4>
+<p>Similar to “Text” and “Image” object, it can be found under “Objects” pane. Purpose of this object is to position other elements at a desired location or size. For example, in this case, without the two “Blank” objects. The 3 icons will be very large, and over-emphasized compared to other main contents. Two “Blank” objects can help to re-size icons and does not look like leave with too much white space.</p>
+<h4 id="creating-a-donut-chart">3.3.2 Creating a donut chart</h4>
+<p>To begin with, I created a calculated field, named as “Number of records” and valued at “1” to represent number of respondants.</p>
+<p>For donut char itself, another calculated field is created, with name as “Zero” and formula as 0.</p>
+<p>Then move “Zero” to left side bar twice, and right click bottom Zero label and select “Dual Axis”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332donutchart1"></span>
+<img src="3.2.1donut%20chart3.PNG" alt="Creating a donut chart 1" width="100%" />
+<p class="caption">
+Figure 22: Creating a donut chart 1
+</p>
+</div>
+</div>
+<p>Then for first “SUM(Zero)”, change chart type as Pie, by right clicking small triangle under Marks pane for “SUM(Zero)”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332donutchart2"></span>
+<img src="3.2.1donut%20chart4.PNG" alt="Creating a donut chart 2" width="200" />
+<p class="caption">
+Figure 23: Creating a donut chart 2
+</p>
+</div>
+</div>
+<p>After that, assessment item is selected for “Color”, “Number of records” is selected for “Size”. We</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332donutchart3"></span>
+<img src="3.2.1donut%20chart5.PNG" alt="Creating a donut chart 3" width="300" />
+<p class="caption">
+Figure 24: Creating a donut chart 3
+</p>
+</div>
+</div>
+<p>For the second “SUM(Zero)”, change chart type as Circle, and color same as background color, “white” in our case by editing “Color”, and also make the center white circle smaller with “Size” under Marks pane.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332donutchart4"></span>
+<img src="3.2.1donut%20chart6.PNG" alt="Creating a donut chart 4" width="300" />
+<p class="caption">
+Figure 25: Creating a donut chart 4
+</p>
+</div>
+</div>
+<p>Next, still at Marks pane for “SUM(Zero)(2)”, we drag over “Number of records” to be calculated by “SUM” and “Country” to be measured by “COUNT DISTINCT” to “Label” to display number of respondents and number of country participated in this survey. By clicking “Label” button, we alter text and also aligned text to shown in the center of circle.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332donutchart5"></span>
+<img src="3.2.1donut%20chart7.PNG" alt="Creating a donut chart 5" width="400" />
+<p class="caption">
+Figure 26: Creating a donut chart 5
+</p>
+</div>
+</div>
+<p>Similarly, I checked “Show Labels” for pie chart to display the willingness distribution by views.</p>
+<p>Then, dual y-axis is removed by right clicking y-axis and unchecking “Show Header”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332donutchart6"></span>
+<img src="3.2.1donut%20chart8.PNG" alt="Creating a donut chart 6" width="400" />
+<p class="caption">
+Figure 27: Creating a donut chart 6
+</p>
+</div>
+</div>
+<p>Then I added tooltip for the chart by choosing “Tooltip” under Marks pane, so when read hover around can have a quick understanding on what the segment is about.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332donutchart7"></span>
+<img src="3.2.1donut%20chart9.PNG" alt="Creating a donut chart 7" width="300" />
+<p class="caption">
+Figure 28: Creating a donut chart 7
+</p>
+</div>
+</div>
+<p>Tooltip: &gt; I &lt;If a Covid-19 vaccine were made available to me this week, I would definitely get it:&gt; to get a Covid-19 vaccine if available to me this week.<br />
+% of respondants by views: &lt;% of Total SUM(Number of records)&gt; Number of respondents: &lt;SUM(Number of records)&gt; Number of participating countries: &lt;CNTD(Country)&gt;</p>
+<h4 id="creating-a-circle-chart-with-confidence-interval-for-proportion">3.3.3 Creating a circle chart with confidence interval for proportion</h4>
+<p>Now we discuss about how to create a circle chart with confidence interval for proportion. The chart also allows user to select which willingness level they want to visualize and significance level for the confidence interval.</p>
+<p>Firstly, create a parameter, “Significance level for CI” by right clicking a white space under “Parameters” pane.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI1"></span>
+<img src="3.2.2CI1.PNG" alt="Creating a parameter for significance level 1" width="200" />
+<p class="caption">
+Figure 29: Creating a parameter for significance level 1
+</p>
+</div>
+</div>
+<p>Key in name, data type, current value, etc. as below.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI2"></span>
+<img src="3.2.2CI2.PNG" alt="Creating a parameter for significance level 2" width="100%" />
+<p class="caption">
+Figure 30: Creating a parameter for significance level 2
+</p>
+</div>
+</div>
+<p>Second, list down all calculated fields, related to making such a chart.</p>
+<blockquote>
+<p>qnorm: IF [Significance level for CI]=0.99 THEN 2.3263 ELSEIF [Significance level for CI]=0.98 THEN 2.0537 ELSEIF [Significance level for CI] = 0.95 THEN 1.6449 elseif [Significance level for CI]= 0.9 THEN 1.2816 END</p>
+</blockquote>
+<blockquote>
+<p>Total Response: {FIXED [Country]: COUNT([Index])}</p>
+</blockquote>
+<blockquote>
+<p>prop: COUNT([Consolidated_vac_1.csv])/sum([Total Response])</p>
+</blockquote>
+<blockquote>
+<p>Prop_SE: SQRT({INCLUDE [If a Covid-19 vaccine were made available to me this week, I would definitely get it:]:[prop]*(1-[prop])}/ [Total Response])</p>
+</blockquote>
+<blockquote>
+<p>Prop_margin of error: [qnorm]*[Prop_SE]</p>
+</blockquote>
+<blockquote>
+<p>Prop_Lower Limit: {INCLUDE [If a Covid-19 vaccine were made available to me this week, I would definitely get it:]:[prop]}-[Prop_margin of error]</p>
+</blockquote>
+<blockquote>
+<p>Prop_Upper Limit: {INCLUDE [If a Covid-19 vaccine were made available to me this week, I would definitely get it:]:[prop]}+[Prop_margin of error]</p>
+</blockquote>
+<p>Next, move ‘prop’ to “Columns” and “Country” to “Rows”, willingness question to “Details” under “Marks” pane and choose data type as “Circle”.</p>
+<p>Then also move willingness item to “Filters”, as we want to visualize the chart based on single views. A Filter window pops up, make select to “Select from list” and with “All” values.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI3"></span>
+<img src="3.2.2CI3.PNG" alt="Adding filter" width="100%" />
+<p class="caption">
+Figure 31: Adding filter
+</p>
+</div>
+</div>
+<p>Then, on the “Filters” pane, right click the measure, and choose “Show Filter”. The Filter will appear on the right of chart.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI4"></span>
+<img src="3.2.2CI4.PNG" alt="Edit filter values" width="300" />
+<p class="caption">
+Figure 32: Edit filter values
+</p>
+</div>
+</div>
+<p>Click the small triangle on the upper right corner of filter card, to “Edit Title” as “Views” as the original column name is very long. Also, change the display from “Multiple Values (list)” to “Single Value (dropdown)” and make “Strongly agree” as default setting.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI5"></span>
+<img src="3.2.2CI5.PNG" alt="Edit filter title and display" width="300" />
+<p class="caption">
+Figure 33: Edit filter title and display
+</p>
+</div>
+</div>
+<p>After this step, we can see the circle chart is sorted aphabetically. To help visualize which country has highest portion on a certain view, I chenged sorting style, by right click “Country” on “Columns” and select “Sorting”. In the pop up window, choose Sort By “Field” on Sort Order “Descending” with Field Name “prop”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI6"></span>
+<img src="3.2.2CI6.PNG" alt="Sorting by field values 1" width="400" />
+<p class="caption">
+Figure 34: Sorting by field values 1
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI7"></span>
+<img src="3.2.2CI7.PNG" alt="Sorting by field values 2" width="400" />
+<p class="caption">
+Figure 35: Sorting by field values 2
+</p>
+</div>
+</div>
+<p>Assessment item is also added for Color, so color legend is aligned when with donut chart when different “View” selection is made.</p>
+<p>Next step is to add the confidence interval to the chart. We select “Prop_Lower Limit” and press “Ctrl” key on keyboard then select “Prop_Upper Limit”, drag and drop both measure to chart area.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI8"></span>
+<img src="3.2.2CI8.PNG" alt="Adding lower limit and upper limit to chart 1" width="300" />
+<p class="caption">
+Figure 36: Adding lower limit and upper limit to chart 1
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI9"></span>
+<img src="3.2.2CI9.PNG" alt="Adding lower limit and upper limit to chart 2" width="100%" />
+<p class="caption">
+Figure 37: Adding lower limit and upper limit to chart 2
+</p>
+</div>
+</div>
+<p>Then a “Measure Values” containing value for “Prop_Lower Limit” and “Prop_Upper Limit” is created and added to “Rows”, move it to “Columns”, and a “Measure Values” containing “Prop_Lower Limit” and “Prop_Upper Limit” is added to “AGG(prop)” for size. Move “Measure Names” to “Columns” and change shape for “Measure Values” to “line”, move “Measure Names” in “Columns” as “Path” for “Measure Values”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI10"></span>
+<img src="3.2.2CI10.PNG" alt="Customize confidence interval elements in a chart 1" width="100%" />
+<p class="caption">
+Figure 38: Customize confidence interval elements in a chart 1
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI12"></span>
+<img src="3.2.2CI12.PNG" alt="Customize confidence interval elements in a chart 2" width="100%" />
+<p class="caption">
+Figure 39: Customize confidence interval elements in a chart 2
+</p>
+</div>
+</div>
+<p>Then charts is displayed with circle chart on the left, and a horizontal line chart on the right. Right click x-axis of the right hand side chart, click “Dual Axis”, “Synchronize axis” and “Hide title”.</p>
+<p>Next, show “Significance level” parameter to allow users’ selection. Besides,since only one view be choosen at a time, color legend is not necessary and the card is removed by clicking the small triangle at the upper right corner and choose “Hide Card”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:332CI15"></span>
+<img src="3.2.2CI15.PNG" alt="Remove color legend card" width="200" />
+<p class="caption">
+Figure 40: Remove color legend card
+</p>
+</div>
+</div>
+<p>Last step for this chart is to edit tooltip and chart title as below. “SUM(Number of records)” is added as Tooltip element for “AGG(prop)” so number of respondents by county and view can be included. Besides, since assessment item started with capital letter, a “Assessment text” calculated field is created to change the word to start with small letter.</p>
+<p>Tooltip:</p>
+<blockquote>
+<p>&lt;AGG(prop)&gt; of respondants in <Country> &lt;If a Covid-19 vaccine were made available to me this week, I would definitely get it:&gt; that they would like to take vaccination. <Measure Names>:<Measure Values></p>
+</blockquote>
+<p>Chart Title:</p>
+<blockquote>
+<p>% of respondants &lt;ATTR(Assessment text)&gt; to vaccination (&lt;Parameters.Significance level for CI&gt; confidence interval)</p>
+</blockquote>
+<h4 id="interaction-within-a-dashboard">3.3.4 Interaction within a dashboard</h4>
+<p>Follow the step and concept discussed in section 3.2.1 and 3.2.4 to create a dashboard. Here, I would like to demonstrate how to add “Actions” so to interact within a dashboard.</p>
+<p>Choose “Dashboard” from top toolbar, select “Actions”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:333db1"></span>
+<img src="3.2.3dashboard1.PNG" alt="Adding action for interaction within in dashboard 1" width="100%" />
+<p class="caption">
+Figure 41: Adding action for interaction within in dashboard 1
+</p>
+</div>
+</div>
+<p>Then “Add Action” in the pop up window and choose “Filter”.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:333db2"></span>
+<img src="3.2.3dashboard2.PNG" alt="Adding action for interaction within in dashboard 2" width="400" />
+<p class="caption">
+Figure 42: Adding action for interaction within in dashboard 2
+</p>
+</div>
+</div>
+<p>Then edit filter action as below to allow selection so that when we selecting one segment in the donut chart, the confidence interval chart can be auto updated with selected view category. Deselecting will keep the filtered values, so that we will never see all view categories appeared tegother.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:333db3"></span>
+<img src="3.2.3dashboard3.PNG" alt="Adding action for interaction within in dashboard 3" width="600" />
+<p class="caption">
+Figure 43: Adding action for interaction within in dashboard 3
+</p>
+</div>
+</div>
+<h3 id="demographics">3.4 Demographics</h3>
+<p>Below is overview of Demographics tab. We can see there are 12 elements, grouped as below.<br />
+a. Element 1: an “Image” object b. Element 2, 8, 12: “Text” object c. Element 3, 7: “Blank” object d. Element 4, 5, 6; “sheet” for navigation e. Element 9: sort selection function f. Element 10, 11: diverging stacked bar with a selector</p>
+<p>Point a, b, c and d we have discussed in earlier sections, I will describe steps in details for point e and f. </p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:demo1"></span>
+<img src="3.1.1main.PNG" alt="Main page overview" width="100%" />
+<p class="caption">
+Figure 44: Main page overview
+</p>
+</div>
+</div>
+<h4 id="diverging-stacked-bar">3.4.1 diverging stacked bar</h4>
+<p>First, adding parameter, “Select breakdown 1” for breakdown selector.</p>
+<p>Attributes to create this parameter is as below.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:341d1"></span>
+<img src="3.4.1diverging1.PNG" alt="Adding parameter to select demographics factor" width="600" />
+<p class="caption">
+Figure 45: Adding parameter to select demographics factor
+</p>
+</div>
+</div>
+<p>Second, create below calculated fields relevant for breakdown selection and diverging stacked bar.</p>
+<blockquote>
+<p>[Select breakdown 1]:<br />
+CASE [Select breakdown 1] WHEN “Country” THEN [Country1] WHEN “Gender” THEN [Gender] WHEN “Age Group” THEN [Age Group] WHEN “Employment Status” THEN [Employment Status] WHEN “Household Children” THEN [Household Children_recode] WHEN “Household Size” THEN STR([Household Size]) END</p>
+</blockquote>
+<blockquote>
+<p>Total Count:<br />
+total(sum([Number of records]))</p>
+</blockquote>
+<blockquote>
+<p>Count Negative:<br />
+IF [If a Covid-19 vaccine were made available to me this week, I would definitely get it:]= ‘5 – Strongly disagree’ THEN 1 ELSEIF [If a Covid-19 vaccine were made available to me this week, I would definitely get it:] = ‘4’ THEN 1 ELSEIF [If a Covid-19 vaccine were made available to me this week, I would definitely get it:] = ‘3’ THEN 0.5 ELSE 0 END</p>
+</blockquote>
+<blockquote>
+<p>Total Response:<br />
+{FIXED [Country]: COUNT([Index])}</p>
+</blockquote>
+<blockquote>
+<p>Total Count Negative:<br />
+TOTAL(sum([Count Negative]))</p>
+</blockquote>
+<blockquote>
+<p>sum([Number of records])/[Total Count]</p>
+</blockquote>
+<blockquote>
+<p>Gantt Start: -[Total Count Negative]/[Total Count]</p>
+</blockquote>
+<blockquote>
+<p>Gantt Percent: PREVIOUS_VALUE([Gantt Start])+zn(LOOKUP([Percentage],-1))</p>
+</blockquote>
+<p>Then move “Gantt Percent” to “Columns”, “Selector 1” to “Rows”, assessment item for coloring, and “Percentage” as size. Change “Marks” type to “Gantt Bar”.</p>
+<p>Change ‘Gantt Percent’ aggregation to be by assessment item. It is achieved by right click “Gantt Percent” on “Columns” and choose “Compute Using” the assessment item.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:341d2"></span>
+<img src="3.4.1diverging2.PNG" alt="Create diverging stacked bar" width="100%" />
+<p class="caption">
+Figure 46: Create diverging stacked bar
+</p>
+</div>
+</div>
+<p>Next, we add 0 as reference line for better clearity. Go to “Analytics” panel, choose “Reference Line” under “Custom”, drop it in the chart area, and select Add a Reference Line “For Table”. Then change the value to be a constant at 0. We can also edit the line texture and color, so it is a supplementary portion to the chart.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:341d4"></span>
+<img src="3.4.1diverging4.PNG" alt="Add reference line for diverging stacked bar 1" width="100%" />
+<p class="caption">
+Figure 47: Add reference line for diverging stacked bar 1
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:341d3"></span>
+<img src="3.4.1diverging3.PNG" alt="Add reference line for diverging stacked bar 2" width="600" />
+<p class="caption">
+Figure 48: Add reference line for diverging stacked bar 2
+</p>
+</div>
+</div>
+<h4 id="adding-sorting-selection">3.4.2 Adding Sorting selection</h4>
+<p>First, adding parameter, “Sort” for breakdown selector.</p>
+<p>Attributes to create this parameter is as below.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:342sort1"></span>
+<img src="3.4.2sort1.PNG" alt="Adding parameter to select which view to sort by" width="600" />
+<p class="caption">
+Figure 49: Adding parameter to select which view to sort by
+</p>
+</div>
+</div>
+<p>Second, create below calculated fields relevant for breakdown selection and diverging stacked bar.</p>
+<ol type="a">
+<li>Sort &gt; IF [Parameters].[Sort] = 2 THEN [PrecentPositive] ELSEIF [Parameters].[Sort] = 1 THEN [PrecentPositiveStrong] ELSEIF [Parameters].[Sort] = 5 THEN [PrecentNegativeStrong] ELSEIF [Parameters].[Sort] = 4 THEN [PrecentNegative] ELSE [PrecentNeutral] END</li>
+</ol>
+<p>Then change sorting method for “Selector 1” to be sort by “Nested” “Descending” with field “Sort”.</p>
+<p>Next, we edit Tooltip and chart title for diverging stacked bar chart as below.</p>
+<p>Tooltip: &gt; Breakdown Selection 1: &lt;Parameters.Select breakdown 1&gt; - &lt;Selector 1&gt; Vaccinaiton acceptance:: &lt;If a Covid-19 vaccine were made available to me this week, I would definitely get it:&gt; Percentage :: &lt;AGG(Percentage)&gt;</p>
+<p>Title: &gt; Vaccination willingness level by &lt;Parameters.Select breakdown 1&gt;</p>
+<p>Then duplicate this sheet and selector elements (i.e. parameter “Select breakdown 1” and calculated field “Select breakdown 1”), update the sheet with “Select breakdown 2” so we can visualize two facotr at the same time.</p>
+<h4 id="interaction-within-a-dashboard-1">3.4.4 Interaction within a dashboard</h4>
+<p>Follow the step and concept discussed in section 3.2.1 and 3.2.4 to create a dashboard. Remove redundant elements for visulization such as legend card as it is already coded in text object.</p>
+<p>Then add a filter action with attributes below to allow selection so that when we selecting one sub-category from one diverging stacked bar, the other chart will be updated.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:343db1"></span>
+<img src="3.4.3db1.PNG" alt="Adding action to filter between two diverging stacked bar" width="600" />
+<p class="caption">
+Figure 50: Adding action to filter between two diverging stacked bar
+</p>
+</div>
+</div>
+<h3 id="bivariate-correlation-analysis">3.5 Bivariate correlation analysis</h3>
+<p>Below is overview of Association tab. We can see there are 12 elements, grouped as below.<br />
+a. Element 1: an “Image” object b. Element 2, 11: “Text” object c. Element 3, 7: “Blank” object d. Element 4, 5, 6; “sheet” for navigation e. Element 8: selection filter f. Element 9+10: Highlight table</p>
+<p>Point a, b, c, d, e we have discussed in earlier sections, I will touch on point f below.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:assoc1"></span>
+<img src="3.5association1.PNG" alt="Association analysis page overview" width="100%" />
+<p class="caption">
+Figure 51: Association analysis page overview
+</p>
+</div>
+</div>
+<h4 id="highlight-table-to-visualize-association-between-two-categorical-variables">3.5.1 Highlight table to visualize association between two categorical variables</h4>
+<p>First, we create a parameter, “Select a question” and also “Show Parameter” to allow audience to select another variable to compare with willingness level.</p>
+<p>Attributes to create this parameter is as below. Values are other survey questions.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:351s1"></span>
+<img src="3.51selector1.PNG" alt="Adding parameter to select another question" width="600" />
+<p class="caption">
+Figure 52: Adding parameter to select another question
+</p>
+</div>
+</div>
+<p>Second, create below calculated fields relevant for breakdown selection and diverging stacked bar.</p>
+<ol type="a">
+<li>Selector &gt; CASE [Select a question] WHEN “I am worried about getting COVID19” THEN[I am worried about getting COVID19] WHEN “I am worried about potential side effects of a COVID19 vaccine” THEN[I am worried about potential side effects of a COVID19 vaccine] WHEN “I believe government health authorities in my country will provide me with an effective COVID19 vaccine” THEN [I believe government health authorities in my country will provide me with an effective COVID19 vaccine] WHEN “If I do not get a COVID19 vaccine when it is available, I will regret it” THEN [If I do not get a COVID19 vaccine when it is available, I will regret it] WHEN “If a Covid-19 vaccine becomes available to me a year from now, I definitely intend to get it” THEN [If a Covid-19 vaccine becomes available to me a year from now, I definitely intend to get it] END</li>
+</ol>
+<p>Next, choose assessment item as “Columns”, “Selector” as “Rows”, “Number of records” for “Text”, change chart type to “Highlight table” using “Show Me”</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:351ht1"></span>
+<img src="3.51ht1.PNG" alt="Select chart type from Show Me" width="200" />
+<p class="caption">
+Figure 53: Select chart type from Show Me
+</p>
+</div>
+</div>
+<p>Since we used orange color as main color throughout this dashboard design, we change color scale to be based off orange. Besides, we also edit Tooltip and title. Intention here is to show user which factor being compared with willingness level. Original question is two long in be included. We create a calculated field to summary what shorten the question to be a simple factor term.</p>
+<p>Selector_text: &gt; CASE [Select a question] WHEN “I am worried about getting COVID19” THEN “Worry level” WHEN “I am worried about potential side effects of a COVID19 vaccine” THEN “Side effect” WHEN “I believe government health authorities in my country will provide me with an effective COVID19 vaccine” THEN “Trust on government” WHEN “If I do not get a COVID19 vaccine when it is available, I will regret it” THEN “Regretness” WHEN “If a Covid-19 vaccine becomes available to me a year from now, I definitely intend to get it” THEN “Time effect” END</p>
+<p>Tooltip: &gt; <Selector_text>: <Selector> Willingness: &lt;If a Covid-19 vaccine were made available to me this week, I would definitely get it:&gt; Number of records: &lt;SUM(Number of records)&gt;</p>
+<p>Title: &gt; Willingness vs <Selector_text></p>
+<h3 id="interaction-among-dashboards">3.6 Interaction among dashboards</h3>
+<p>Now we have completed all four dashboards. As mentioned earlier, we want to add “Actions” to the 4 icons so we can navigate by icon buttons.</p>
+<p>Similar as filter action, a navigation action can be added by clicking “Action” under “Dashboard” on toolbar. In the pop up window, choose “Go to sheet” instead of “Filters”. Then, create action with below entry.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:36interaction1"></span>
+<img src="3.6interaction1.PNG" alt="Add action for navigation 1" width="400" />
+<p class="caption">
+Figure 54: Add action for navigation 1
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:36interaction2"></span>
+<img src="3.6interaction2.PNG" alt="Add action for navigation 2" width="600" />
+<p class="caption">
+Figure 55: Add action for navigation 2
+</p>
+</div>
+</div>
+<p>This allows when “Select” “OverviewIcon” (the sheet name to represent the icon) will navigate user to target sheet “Overview”.</p>
+<p>Do it similarly for the rest of icons in dashboards.</p>
+<h1 id="discussion">4 Discussion</h1>
+<h3 id="insight-1-united-kindom-has-most-respondents-strongly-agreed-to-vaccination-while-france-is-the-one-most-against-3-asian-countries-has-most-proportion-being-neutral">4.1 Insight 1: United Kindom has most respondents strongly agreed to vaccination while France is the one most against, 3 Asian countries has most proportion being neutral</h3>
+<p>Navigate to “Overview” dashboard, when select view as “Strongly agree”, we can see that United Kindom has most respondents strongly agreed to vaccination. Followed by Israel and Denmark.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:41insight1"></span>
+<img src="4.1insight1.PNG" alt="United Kindom has most respondents strongly agreed to vaccination" width="100%" />
+<p class="caption">
+Figure 56: United Kindom has most respondents strongly agreed to vaccination
+</p>
+</div>
+</div>
+<p>In terms of strongly disagree, we can see that public in France has highest percentage against vaccination, leading by ~15% compared to that with second runner up, Germany.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:41insight2"></span>
+<img src="4.1insight2.PNG" alt="Public in France strongly against vaccination the most" width="100%" />
+<p class="caption">
+Figure 57: Public in France strongly against vaccination the most
+</p>
+</div>
+</div>
+<p>Navigate to “Demographics” dashboard, when we choose to breakdown by country and sort by “Neutral”, we can see that top 3 countries show neutral to vaccination are all Asian countries, namely South Korea, Singapore, Japan.We can also see the 3 countries has a very small bar on strong views, being it Strongly agree or Strongly disagree. This might be due to cultural difference.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:41insight3"></span>
+<img src="4.1insight3.PNG" alt="APublic in Asian countries shows most proportion with a neutral stand" width="100%" />
+<p class="caption">
+Figure 58: APublic in Asian countries shows most proportion with a neutral stand
+</p>
+</div>
+</div>
+<h3 id="insight-2-distribution-by-gender-and-age-group-show-a-pattern">4.2 Insight 2: Distribution by gender and age group show a pattern</h3>
+<p>Stay on “Demographics” dashboard, when we breakdown by country and gender for two charts. On the left chart for breakdown by gender, can notice that male respondents are more willing to vaccination. Same trend can be seen, When we select different countries on the left. That is to say the trend, male respondents are more willing to vaccination compared to female, is observed at overview level as well as individual country level.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:42insight1"></span>
+<img src="4.2insight1.PNG" alt="Male is more pro-vaccine" width="100%" />
+<p class="caption">
+Figure 59: Male is more pro-vaccine
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:42insight2"></span>
+<img src="4.2insight2.PNG" alt="Male is more pro-vaccine holds through different countries, example on Denmark" width="100%" />
+<p class="caption">
+Figure 60: Male is more pro-vaccine holds through different countries, example on Denmark
+</p>
+</div>
+</div>
+<p>Stay on “Demographics” dashboard, when we breakdown by country and age group for two charts. It is observed that elderly are more willing to vaccination.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:42insight3"></span>
+<img src="4.2insight3.PNG" alt="Elderly are more towards vaccinations" width="100%" />
+<p class="caption">
+Figure 61: Elderly are more towards vaccinations
+</p>
+</div>
+</div>
+<h3 id="insight-3-trust-on-government-is-positively-correlated-to-willingness-level-while-side-effect-is-on-the-opposite-and-time-helps.">4.3 Insight 3: Trust on government is positively correlated to willingness level, while side effect is on the opposite, and time helps.</h3>
+<p>Navigate to “Association analytics” dashboard, we can see that if public has a strong trust on government to bring them effective vaccine, tend to has more people agree to vaccination, so call positively related.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:43insight1"></span>
+<img src="4.3insight1.PNG" alt="Trust on government is positively related to willningness level" width="100%" />
+<p class="caption">
+Figure 62: Trust on government is positively related to willningness level
+</p>
+</div>
+</div>
+<p>Side effect matters, i.e. people worry about side effect of vaccine tend to against taking it. Worry level shows similar reverse co-occurrence pattern.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:43insight2"></span>
+<img src="4.3insight2.PNG" alt="Side effect matters" width="100%" />
+<p class="caption">
+Figure 63: Side effect matters
+</p>
+</div>
+</div>
+<p>Time helps, i.e. willingness level improved comparing vaccine now with one year later.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:43insight3"></span>
+<img src="4.3insight3.PNG" alt="Time helps improve willingness" width="100%" />
+<p class="caption">
+Figure 64: Time helps improve willingness
+</p>
+</div>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

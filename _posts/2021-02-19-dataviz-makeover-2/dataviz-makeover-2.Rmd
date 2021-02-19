@@ -17,10 +17,9 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Data Visualisation (Tableau Online): [To vaccine or not vaccine: what is public view?]()
+Data Visualisation (Tableau Online): [To vaccine or not vaccine: what is public view?](https://public.tableau.com/profile/lihongting#!/vizhome/Tovaccineornotvaccinewhatispublicview/Main)
 
 Data Source: [Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub](https://github.com/YouGov-Data/covid-19-tracker)
-
 
 
 #  1 Critiques and Suggestions
@@ -756,7 +755,6 @@ Stay on "Demographics" dashboard, when we breakdown by country and gender for tw
 ```{r 42insight1, echo=FALSE, fig.cap="Male is more pro-vaccine", out.width = '100%'}
 knitr::include_graphics("4.2insight1.png")
 ```
-
 ```{r 42insight2, echo=FALSE, fig.cap="Male is more pro-vaccine holds through different countries, example on Denmark", out.width = '100%'}
 knitr::include_graphics("4.2insight2.png")
 ```

@@ -356,7 +356,7 @@ knitr::include_graphics("3.2.2CI1.png")
 
 Key in name, data type, current value, etc. as below. 
 
-```{r 332CI2, echo=FALSE, fig.cap="Creating a parameter for significance level 2", out.width = '100%'}
+```{r 332CI2, echo=FALSE, fig.cap="Creating a parameter for significance level 2",out.width = '600'}
 knitr::include_graphics("3.2.2CI2.png")
 
 ```
@@ -480,7 +480,7 @@ Follow the step and concept discussed in section 3.2.1 and 3.2.4 to create a das
 
 Choose "Dashboard" from top toolbar, select "Actions".
 
-```{r 333db1, echo=FALSE, fig.cap="Adding action for interaction within in dashboard 1", out.width = '600'}
+```{r 333db1, echo=FALSE, fig.cap="Adding action for interaction within in dashboard 1", out.width = '400'}
 knitr::include_graphics("3.2.3dashboard1.png")
 ```
 

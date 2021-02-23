@@ -45,7 +45,7 @@ Critiques <-c(
 
 Suggestions <-c(
   "A normal bar chart can be used when there is two categories. For multi-category Liker data, diverging stacked bar chart is proposed. ",
-  "We can follow the idea to present single view category. Proportion is with uncertainty, it varies with proportion and sample size. Hence, confidence interval is added and represent the graph with dot. Besides, to further enhance the chart with interactivity, all willingness level can be presented by selection and also included 4 common significance level for confidence interval. ", 
+  "We can follow the idea to present single view category. Proportion is with uncertainty, it varies with proportion and sample size. Hence, confidence interval is added and represent the graph with dot. Besides, to further enhance the chart with interactivity, all willingness level can be presented by selection and also included 4 common confidence level for confidence interval. ", 
   "To improve from here, interactive features are proposed to allow readers to select which willingness level be used for sorting. "
   )
 
@@ -263,24 +263,19 @@ Last but not least, we hover around and align the 10 elements. Also note that th
 
 Below is overview of Overview tab. We can see there are 11 elements, similarly we group them as below.  
 a. Element 1: an "Image" object
-b. Element 2, 8, 11: "Text" object
-c. Element 3, 7: "Blank" object
-d. Element 4, 5, 6; "sheet" for navigation 
-e. Element 9: a donut chart
-f. Element 10: circle chart with confidence interval plus 2 filters
+b. Element 2, 3, 7, 8, 11: "Text" object
+c. Element 4, 5, 6; "sheet" for navigation 
+d. Element 9: a donut chart
+e. Element 10: circle chart with confidence interval plus 2 filters
 
-Point a, b, d we have discussed in Section 3.2, I will focus on point c, e and f. 
+Point a, b, d we have discussed in Section 3.2, I will focus on point c, d and. 
 
 ```{r overview1, echo=FALSE, fig.cap="Main page overview", out.width = '100%'}
-knitr::include_graphics("3.1.1main.png")
+knitr::include_graphics("3.2.1overview.png")
 
 ```
 
-#### 3.3.1 Creating a "Blank" object
-
-Similar to "Text" and "Image" object, it can be found under "Objects" pane. Purpose of this object is to position other elements at a desired location or size. For example, in this case, without the two "Blank" objects. The 3 icons will be very large, and over-emphasized compared to other main contents. Two "Blank" objects can help to re-size icons and does not look like leave with too much white space. 
-
-#### 3.3.2 Creating a donut chart
+#### 3.3.1 Creating a donut chart
 
 To begin with, I created a calculated field, named as "Number of records" and valued at "1" to represent number of respondants. 
 
@@ -343,31 +338,31 @@ Tooltip:
 Number of respondents: <SUM(Number of records)>
 Number of participating countries: <CNTD(Country)>
 
-#### 3.3.3 Creating a circle chart with confidence interval for proportion
+#### 3.3.2 Creating a circle chart with confidence interval for proportion
 
-Now we discuss about how to create a circle chart with confidence interval for proportion. The chart also allows user to select which willingness level they want to visualize and significance level for the confidence interval. 
+Now we discuss about how to create a circle chart with confidence interval for proportion. The chart also allows user to select which willingness level they want to visualize and confidence level for the confidence interval. 
 
-Firstly, create a parameter, "Significance level for CI" by right clicking a white space under "Parameters" pane.  
+Firstly, create a parameter, "confidence level for CI" by right clicking a white space under "Parameters" pane.  
 
-```{r 332CI1, echo=FALSE, fig.cap="Creating a parameter for significance level 1", out.width = '200'}
+```{r 332CI1, echo=FALSE, fig.cap="Creating a parameter for confidence level 1", out.width = '200'}
 knitr::include_graphics("3.2.2CI1.png")
 
 ```
 
 Key in name, data type, current value, etc. as below. 
 
-```{r 332CI2, echo=FALSE, fig.cap="Creating a parameter for significance level 2",out.width = '600'}
-knitr::include_graphics("3.2.2CI2.png")
+```{r 332CI2, echo=FALSE, fig.cap="Creating a parameter for confidence level 2",out.width = '600'}
+knitr::include_graphics("3.2.2CI2_1.png")
 
 ```
 
 Second, list down all calculated fields, related to making such a chart. 
 
 > qnorm:
-> IF [Significance level for CI]=0.99 THEN 2.3263
-ELSEIF [Significance level for CI]=0.98 THEN 2.0537
-ELSEIF [Significance level for CI] = 0.95 THEN 1.6449
-elseif [Significance level for CI]= 0.9 THEN 1.2816
+> IF [confidence level for CI]=0.99 THEN 2.3263
+ELSEIF [confidence level for CI]=0.98 THEN 2.0537
+ELSEIF [confidence level for CI] = 0.95 THEN 1.6449
+elseif [confidence level for CI]= 0.9 THEN 1.2816
 END
 
 > Total Response:
@@ -455,10 +450,10 @@ knitr::include_graphics("3.2.2CI12.png")
 
 Then charts is displayed with circle chart on the left, and a horizontal line chart on the right. Right click x-axis of the right hand side chart, click "Dual Axis", "Synchronize axis" and "Hide title". 
 
-Next, show "Significance level" parameter to allow users' selection. Besides,since only one view be choosen at a time, color legend is not necessary and the card is removed by clicking the small triangle at the upper right corner and choose "Hide Card". 
+Next, show "confidence level" parameter to allow users' selection. Besides,since only one view be choosen at a time, color legend is not necessary and the card is removed by clicking the small triangle at the upper right corner and choose "Hide Card". 
 
 ```{r 332CI15, echo=FALSE, fig.cap="Remove color legend card", out.width = '200'}
-knitr::include_graphics("3.2.2CI15.png")
+knitr::include_graphics("3.2.2CI15_1.png")
 
 ```
 
@@ -471,10 +466,10 @@ Tooltip:
 
 Chart Title:
 
-> % of respondants <ATTR(Assessment text)> to vaccination (<Parameters.Significance level for CI> confidence interval)
+> % of respondants <ATTR(Assessment text)> to vaccination (<Parameters.confidence level for CI> confidence interval)
 
 
-#### 3.3.4 Interaction within a dashboard
+#### 3.3.3 Interaction within a dashboard
 
 Follow the step and concept discussed in section 3.2.1 and 3.2.4 to create a dashboard. Here, I would like to demonstrate how to add "Actions" so to interact within a dashboard. 
 
@@ -705,7 +700,7 @@ Willingness: <If a Covid-19 vaccine were made available to me this week, I would
 Number of records: <SUM(Number of records)>
 
 Title:
-> Willingness vs <Selector_text>
+> Selector_text> vs Willingness
 
 
 ### 3.6 Interaction among dashboards
@@ -733,13 +728,13 @@ Do it similarly for the rest of icons in dashboards.
 Navigate to "Overview" dashboard, when select view as "Strongly agree", we can see that United Kindom has most respondents strongly agreed to vaccination. Followed by Israel and Denmark.
 
 ```{r 41insight1, echo=FALSE, fig.cap="United Kindom has most respondents strongly agreed to vaccination", out.width = '100%'}
-knitr::include_graphics("4.1insight1.png")
+knitr::include_graphics("4.1insight1_1.png")
 ```
 
 In terms of strongly disagree, we can see that public in France has highest percentage against vaccination, leading by ~15% compared to that with second runner up, Germany.
 
 ```{r 41insight2, echo=FALSE, fig.cap="Public in France strongly against vaccination the most", out.width = '100%'}
-knitr::include_graphics("4.1insight2.png")
+knitr::include_graphics("4.1insight2_1.png")
 ```
 
 Navigate to "Demographics" dashboard, when we choose to breakdown by country and sort by "Neutral", we can see that top 3 countries show neutral to vaccination are all Asian countries, namely South Korea, Singapore, Japan.We can also see the 3 countries has a very small bar on strong views, being it Strongly agree or Strongly disagree. This might be due to cultural difference.  

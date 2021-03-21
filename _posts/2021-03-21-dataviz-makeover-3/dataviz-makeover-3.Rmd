@@ -98,7 +98,7 @@ Interactivity <- data.frame(SN, Critiques, Suggestions)
 library(knitr)
 library(dplyr)
 library(kableExtra)
-kable(aesthetic,type='html',align='l') %>%
+kable(Interactivity,type='html',align='l') %>%
   kable_styling() %>%
   row_spec(0, color = 'white', background = 'black', align='l') %>% #format header color and background. 
   column_spec(1, width_min="3em") %>%
